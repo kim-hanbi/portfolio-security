@@ -21,7 +21,7 @@ export function Hero() {
               color: 'var(--foreground)'
             }}
           >
-            정보보안 실무 역량 개발 과정
+            실무 역량을 키워가는 정보 & 보안
           </h1>
           <p 
             className="mb-8 max-w-2xl" 
