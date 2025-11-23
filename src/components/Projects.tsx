@@ -1,5 +1,5 @@
 import { ExternalLink, Shield, Lock, Code } from "lucide-react";
-import image20 from "./assets/images/20.png"; 
+import image20 from "./assets/images/20.png";
 
 const projects = [
   {
