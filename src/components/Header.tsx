@@ -60,16 +60,6 @@ export function Header() {
             Contact
           </a>
         </nav>
-
-        <Button 
-          style={{ 
-            backgroundColor: 'var(--primary)',
-            color: 'var(--primary-foreground)',
-            borderRadius: '12px'
-          }}
-        >
-          Download CV
-        </Button>
       </div>
     </header>
   );
