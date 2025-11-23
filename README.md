@@ -1,0 +1,11 @@
+
+  # UI Theme Guide
+
+  This is a code bundle for UI Theme Guide. The original project is available at https://www.figma.com/design/7DXVitC41q9tjVZbaNjh7p/UI-Theme-Guide.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  
