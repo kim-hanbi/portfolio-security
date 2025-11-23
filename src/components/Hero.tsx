@@ -5,36 +5,37 @@ export function Hero() {
   return (
     <section className="px-20 py-24 lg:py-32">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-6">
+
         <div className="lg:col-span-7 flex flex-col justify-center">
+
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card w-fit mb-6 shadow-card">
-            <Shield className="w-4 h-4" style={{ color: "var(--primary)" }} />
-            <span className="text-sm" style={{ color: "var(--muted-foreground)" }}>
+            <Shield className="w-4 h-4" style={{ color: 'var(--primary)' }} />
+            <span className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
               Cybersecurity Portfolio
             </span>
           </div>
 
           <h1
-            className="mb-4 font-semibold whitespace-pre-line"
+            className="mb-6"
             style={{
-              fontSize: "3.8rem",
-              lineHeight: "1.15",
+              fontSize: "3.5rem",
+              lineHeight: "1.1",
+              fontWeight: "600",
               color: "var(--foreground)",
             }}
           >
-            {`실무 역량을 키워가는\n`}
-            <span style={{ color: "var(--primary)" }}>정보 & 보안</span>
+            실무 역량을 키워가는 정보 & 보안
           </h1>
 
           <p
-            className="mb-10 max-w-xl"
+            className="mb-8 max-w-2xl"
             style={{
-              fontSize: "1.1rem",
-              lineHeight: "1.75",
+              fontSize: "1.25rem",
+              lineHeight: "1.6",
               color: "var(--muted-foreground)",
-              fontWeight: 400,
             }}
           >
-            실습 경험을 바탕으로 꾸준히 성장하는 보안 인력입니다.
+            실습과 경험을 통해 꾸준히 성장하고 있는 보안 신입입니다.
           </p>
 
           <div className="flex gap-4">
@@ -60,6 +61,7 @@ export function Hero() {
               Contact Me
             </Button>
           </div>
+
         </div>
 
         <div className="lg:col-span-5 flex items-center">
@@ -74,6 +76,7 @@ export function Hero() {
             />
           </div>
         </div>
+
       </div>
     </section>
   );
