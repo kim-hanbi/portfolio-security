@@ -24,7 +24,7 @@ export function Hero() {
               color: "var(--foreground)",
             }}
           >
-            실무 역량을 키워가는 정보 & 보안
+            {`실무 역량을 키워가는\n정보 & 보안`}
           </h1>
 
           <p
