@@ -3,7 +3,7 @@ import { ExternalLink, Shield, Lock, Code } from "lucide-react";
 const projects = [
   {
     title: "네트워크 보안 실습 환경 구축",
-    description: "방화벽, IDS/IPS(Snort), HIDS(OSSEC), VPN 등을 통합 구성하여 다양한 공격 시나리오를 탐지·대응할 수 있는 네트워크 보안 실습 환경을 구축한 프로젝트.",
+    description: "Firewall·VPN·IDS/IPS·HIDS를 통합한 네트워크 보안 실습 환경 구축 프로젝트",
     icon: Shield,
     tags: ["Firewall", "IDS/IPS", "VPN", "Snort"],
     image: "https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlciUyMHNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NjM4NDEzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
