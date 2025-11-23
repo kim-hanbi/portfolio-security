@@ -38,10 +38,10 @@ export function Projects() {
               color: 'var(--foreground)'
             }}
           >
-            Featured Projects
+            Portfolio Projects
           </h2>
           <p style={{ color: 'var(--muted-foreground)', fontSize: '1.125rem' }}>
-            Recent security engineering projects and implementations
+            Recent security Labs and Projects
           </p>
         </div>
 
