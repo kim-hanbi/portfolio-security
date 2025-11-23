@@ -9,7 +9,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card w-fit mb-6 shadow-card">
             <Shield className="w-4 h-4" style={{ color: 'var(--primary)' }} />
             <span className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
-              Security Engineering
+              Cybersecurity Portfolio
             </span>
           </div>
           <h1 
