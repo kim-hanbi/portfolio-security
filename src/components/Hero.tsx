@@ -5,7 +5,6 @@ export function Hero() {
   return (
     <section className="px-20 py-24 lg:py-32">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-6">
-
         <div className="lg:col-span-7 flex flex-col justify-center">
 
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card w-fit mb-6 shadow-card">
@@ -16,7 +15,7 @@ export function Hero() {
           </div>
 
           <h1
-            className="mb-6"
+            className="mb-6 whitespace-pre-line"
             style={{
               fontSize: "3.5rem",
               lineHeight: "1.1",
