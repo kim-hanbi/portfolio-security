@@ -19,7 +19,7 @@ export function Header() {
             <Shield className="w-5 h-5" style={{ color: 'var(--primary-foreground)' }} />
           </div>
           <span style={{ fontWeight: '600', color: 'var(--foreground)', fontSize: '1.125rem' }}>
-            SecurePort
+            👨‍💻 Junior Cybersecurity Portfolio
           </span>
         </div>
 
