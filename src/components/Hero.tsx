@@ -21,7 +21,7 @@ export function Hero() {
               color: 'var(--foreground)'
             }}
           >
-            Building Secure Systems for a Digital World
+            정보보안 실무 역량 개발 과정
           </h1>
           <p 
             className="mb-8 max-w-2xl" 
@@ -31,8 +31,7 @@ export function Hero() {
               color: 'var(--muted-foreground)'
             }}
           >
-            Security engineer specializing in penetration testing, secure architecture design, 
-            and vulnerability assessment. Protecting digital assets through proactive security measures.
+            실습과 경험을 통해 꾸준히 성장하고 있는 보안 신입입니다.
           </p>
           <div className="flex gap-4">
             <Button 
