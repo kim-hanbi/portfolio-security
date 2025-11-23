@@ -1,5 +1,7 @@
 import { ExternalLink, Shield, Lock, Code } from "lucide-react";
-import image20 from "./assets/images/20.png";
+import img1 from "./assets/images/1/0.png";
+import img2 from "./assets/images/2/0.PNG";
+import img3 from "./assets/images/3/0.PNG";
 
 const projects = [
   {
@@ -7,21 +9,21 @@ const projects = [
     description: "Firewall·VPN·IDS/IPS·HIDS를 통합한 네트워크 보안 실습 환경 구축 프로젝트",
     icon: Shield,
     tags: ["Firewall", "IDS/IPS", "VPN", "Snort"],
-    image: image20
+    image: img1
   },
   {
-    title: "Zero Trust Architecture",
-    description: "Designed and implemented zero trust security model for cloud infrastructure, reducing attack surface by 70%.",
+    title: "보안 인프라 통합 운영 및 침해 대응 실습",
+    description: "DDoS·권한 상승·파일 변조 공격 시뮬레이션을 통한 실전 대응 환경 구축 프로젝트",
     icon: Lock,
-    tags: ["Cloud Security", "Zero Trust", "IAM"],
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    tags: ["Defense-in-Depth", "Incident Response", "Monitoring", "Traffic Analysis"],
+    image: img2
   },
   {
-    title: "Secure Code Review Pipeline",
-    description: "Developed automated security scanning pipeline integrating SAST and DAST tools into CI/CD workflow.",
+    title: "공격·탐지·분석 기반 통합 보안 실습 인프라 구축",
+    description: "Firewall·IPS/IDS·HIDS·SIEM 기반 실전 침해대응 환경 구축 및 분석 프로젝트",
     icon: Code,
-    tags: ["DevSecOps", "Automation", "SAST/DAST"],
-    image: "https://images.unsplash.com/photo-1761519609249-c0ca325f81db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW5ldHJhdGlvbiUyMHRlc3RpbmclMjBjb2RlfGVufDF8fHx8MTc2Mzg3ODA4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    tags: ["Incident Response", "Defense-in-Depth", "Monitoring", "Threat Analysis"],
+    image: img3
   }
 ];
 
