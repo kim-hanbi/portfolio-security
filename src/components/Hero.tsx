@@ -8,14 +8,14 @@ export function Hero() {
         <div className="lg:col-span-7 flex flex-col justify-center">
 
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card w-fit mb-6 shadow-card">
-            <Shield className="w-4 h-4" style={{ color: 'var(--primary)' }} />
-            <span className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
+            <Shield className="w-4 h-4" style={{ color: "var(--primary)" }} />
+            <span className="text-sm" style={{ color: "var(--muted-foreground)" }}>
               Cybersecurity Portfolio
             </span>
           </div>
 
           <h1
-            className="mb-6 whitespace-pre-line"
+            className="mb-6"
             style={{
               fontSize: "3.5rem",
               lineHeight: "1.1",
@@ -23,7 +23,8 @@ export function Hero() {
               color: "var(--foreground)",
             }}
           >
-            {`실무 역량을 키워가는\n정보 & 보안`}
+            <span style={{ display: "block" }}>실무 역량을 키워가는</span>
+            <span style={{ display: "block" }}>정보 & 보안</span>
           </h1>
 
           <p
