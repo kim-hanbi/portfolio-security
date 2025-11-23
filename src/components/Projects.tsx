@@ -1,4 +1,5 @@
 import { ExternalLink, Shield, Lock, Code } from "lucide-react";
+import image20 from "src\components\assets\images\20.png";
 
 const projects = [
   {
@@ -6,7 +7,7 @@ const projects = [
     description: "Firewall·VPN·IDS/IPS·HIDS를 통합한 네트워크 보안 실습 환경 구축 프로젝트",
     icon: Shield,
     tags: ["Firewall", "IDS/IPS", "VPN", "Snort"],
-    image: "https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlciUyMHNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NjM4NDEzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    image: "image20"
   },
   {
     title: "Zero Trust Architecture",
