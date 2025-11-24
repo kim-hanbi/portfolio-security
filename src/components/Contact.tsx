@@ -19,7 +19,7 @@ export function Contact() {
           style={{ color: "var(--muted-foreground)", fontSize: "1.125rem", lineHeight: "1.6" }}
         >
           보안 분야에 도전하는 신입으로 배우고 성장할 기회를 기다리고 있습니다.<br />
-          프로젝트 관련 문의나 조언, 협업 제안은 아래 이메일로 연락해주세요.
+          프로젝트 관련 문의나 조언, 협업 제안은 아래 이메일로 연락주세요.
         </p>
 
         <div
