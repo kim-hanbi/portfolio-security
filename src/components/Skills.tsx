@@ -35,13 +35,13 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section className="px-20 py-24" style={{ backgroundColor: 'var(--card)' }}>
+    <section id="skills" className="px-6 md:px-20 py-24" style={{ backgroundColor: 'var(--card)' }}>
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <h2 
             className="mb-4"
             style={{ 
-              fontSize: '2.5rem',
+              fontSize: 'clamp(2rem, 4vw, 2.5rem)',
               lineHeight: '1.2',
               fontWeight: '600',
               color: 'var(--foreground)'

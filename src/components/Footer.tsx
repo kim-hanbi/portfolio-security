@@ -1,9 +1,22 @@
 import { Shield, Mail, Linkedin, Github } from "lucide-react";
+import { toast } from "sonner@2.0.3";
 
 export function Footer() {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleSocialClick = (platform: string) => {
+    toast.info(`Opening ${platform}...`);
+  };
+
   return (
     <footer 
-      className="px-20 py-12"
+      className="px-6 md:px-20 py-12"
       style={{ 
         backgroundColor: 'var(--background)',
         borderTop: '1px solid var(--border)'
@@ -39,7 +52,8 @@ export function Footer() {
               <li>
                 <a 
                   href="#about"
-                  className="transition-colors hover:opacity-80"
+                  onClick={(e) => scrollToSection(e, 'about')}
+                  className="transition-colors hover:opacity-80 cursor-pointer"
                   style={{ color: 'var(--muted-foreground)' }}
                 >
                   About
@@ -48,7 +62,8 @@ export function Footer() {
               <li>
                 <a 
                   href="#projects"
-                  className="transition-colors hover:opacity-80"
+                  onClick={(e) => scrollToSection(e, 'projects')}
+                  className="transition-colors hover:opacity-80 cursor-pointer"
                   style={{ color: 'var(--muted-foreground)' }}
                 >
                   Projects
@@ -57,7 +72,8 @@ export function Footer() {
               <li>
                 <a 
                   href="#skills"
-                  className="transition-colors hover:opacity-80"
+                  onClick={(e) => scrollToSection(e, 'skills')}
+                  className="transition-colors hover:opacity-80 cursor-pointer"
                   style={{ color: 'var(--muted-foreground)' }}
                 >
                   Skills
@@ -95,19 +111,22 @@ export function Footer() {
             </h4>
             <div className="flex gap-3 mb-4">
               <button 
-                className="w-10 h-10 rounded-lg flex items-center justify-center transition-colors hover:scale-105"
+                onClick={() => handleSocialClick('Email')}
+                className="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:scale-105"
                 style={{ backgroundColor: 'var(--card)' }}
               >
                 <Mail className="w-5 h-5" style={{ color: 'var(--primary)' }} />
               </button>
               <button 
-                className="w-10 h-10 rounded-lg flex items-center justify-center transition-colors hover:scale-105"
+                onClick={() => handleSocialClick('LinkedIn')}
+                className="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:scale-105"
                 style={{ backgroundColor: 'var(--card)' }}
               >
                 <Linkedin className="w-5 h-5" style={{ color: 'var(--primary)' }} />
               </button>
               <button 
-                className="w-10 h-10 rounded-lg flex items-center justify-center transition-colors hover:scale-105"
+                onClick={() => handleSocialClick('GitHub')}
+                className="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:scale-105"
                 style={{ backgroundColor: 'var(--card)' }}
               >
                 <Github className="w-5 h-5" style={{ color: 'var(--primary)' }} />

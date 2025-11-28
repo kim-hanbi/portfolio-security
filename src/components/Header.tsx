@@ -1,10 +1,34 @@
-import { Shield } from "lucide-react";
+import { Shield, Menu, X, Download } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState } from "react";
+import { toast } from "sonner@2.0.3";
 
 export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setMobileMenuOpen(false);
+    }
+  };
+
+  const handleDownloadCV = () => {
+    toast.success("CV download started!");
+    // 실제 CV 다운로드 로직
+    const link = document.createElement('a');
+    link.href = '/sample-cv.pdf'; // 실제 CV 파일 경로
+    link.download = 'Security_Engineer_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <header 
-      className="px-20 py-6 sticky top-0 z-50 backdrop-blur-sm"
+      className="px-6 md:px-20 py-6 sticky top-0 z-50 backdrop-blur-sm"
       style={{ 
         backgroundColor: 'rgba(255, 255, 255, 0.9)',
         borderBottom: '1px solid var(--border)'
@@ -19,48 +43,145 @@ export function Header() {
             <Shield className="w-5 h-5" style={{ color: 'var(--primary-foreground)' }} />
           </div>
           <span style={{ fontWeight: '600', color: 'var(--foreground)', fontSize: '1.125rem' }}>
-            👨‍💻 Junior Cybersecurity Portfolio
+            SecurePort
           </span>
         </div>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <a 
             href="#about" 
-            className="transition-colors hover:opacity-80"
+            onClick={(e) => scrollToSection(e, 'about')}
+            className="transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: 'var(--foreground)' }}
           >
             About
           </a>
           <a 
             href="#projects" 
-            className="transition-colors hover:opacity-80"
+            onClick={(e) => scrollToSection(e, 'projects')}
+            className="transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: 'var(--foreground)' }}
           >
             Projects
           </a>
           <a 
             href="#skills" 
-            className="transition-colors hover:opacity-80"
+            onClick={(e) => scrollToSection(e, 'skills')}
+            className="transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: 'var(--foreground)' }}
           >
             Skills
           </a>
           <a 
             href="#experience" 
-            className="transition-colors hover:opacity-80"
+            onClick={(e) => scrollToSection(e, 'experience')}
+            className="transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: 'var(--foreground)' }}
           >
             Experience
           </a>
           <a 
             href="#contact" 
-            className="transition-colors hover:opacity-80"
+            onClick={(e) => scrollToSection(e, 'contact')}
+            className="transition-colors hover:opacity-80 cursor-pointer"
             style={{ color: 'var(--foreground)' }}
           >
             Contact
           </a>
         </nav>
+
+        <div className="flex items-center gap-4">
+          <Button 
+            onClick={handleDownloadCV}
+            className="hidden md:flex items-center gap-2"
+            style={{ 
+              backgroundColor: 'var(--primary)',
+              color: 'var(--primary-foreground)',
+              borderRadius: '12px'
+            }}
+          >
+            <Download className="w-4 h-4" />
+            Download CV
+          </Button>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg"
+            style={{ backgroundColor: 'var(--card)' }}
+          >
+            {mobileMenuOpen ? (
+              <X className="w-5 h-5" style={{ color: 'var(--foreground)' }} />
+            ) : (
+              <Menu className="w-5 h-5" style={{ color: 'var(--foreground)' }} />
+            )}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div 
+          className="md:hidden mt-4 p-4 rounded-[12px] shadow-card"
+          style={{ backgroundColor: 'var(--background)' }}
+        >
+          <nav className="flex flex-col gap-4">
+            <a 
+              href="#about" 
+              onClick={(e) => scrollToSection(e, 'about')}
+              className="py-2 transition-colors hover:opacity-80"
+              style={{ color: 'var(--foreground)' }}
+            >
+              About
+            </a>
+            <a 
+              href="#projects" 
+              onClick={(e) => scrollToSection(e, 'projects')}
+              className="py-2 transition-colors hover:opacity-80"
+              style={{ color: 'var(--foreground)' }}
+            >
+              Projects
+            </a>
+            <a 
+              href="#skills" 
+              onClick={(e) => scrollToSection(e, 'skills')}
+              className="py-2 transition-colors hover:opacity-80"
+              style={{ color: 'var(--foreground)' }}
+            >
+              Skills
+            </a>
+            <a 
+              href="#experience" 
+              onClick={(e) => scrollToSection(e, 'experience')}
+              className="py-2 transition-colors hover:opacity-80"
+              style={{ color: 'var(--foreground)' }}
+            >
+              Experience
+            </a>
+            <a 
+              href="#contact" 
+              onClick={(e) => scrollToSection(e, 'contact')}
+              className="py-2 transition-colors hover:opacity-80"
+              style={{ color: 'var(--foreground)' }}
+            >
+              Contact
+            </a>
+            <Button 
+              onClick={handleDownloadCV}
+              className="w-full flex items-center justify-center gap-2"
+              style={{ 
+                backgroundColor: 'var(--primary)',
+                color: 'var(--primary-foreground)',
+                borderRadius: '12px'
+              }}
+            >
+              <Download className="w-4 h-4" />
+              Download CV
+            </Button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
