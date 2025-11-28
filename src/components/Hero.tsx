@@ -12,24 +12,33 @@ export function Hero() {
   return (
     <section id="about" className="px-6 md:px-20 py-24 lg:py-32">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
+        
+        {/* LEFT TEXT AREA */}
         <div className="lg:col-span-7 flex flex-col justify-center">
+          
+          {/* 🔵 1. 상단 라벨 변경 (Cybersecurity Portfolio) */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card w-fit mb-6 shadow-card">
             <Shield className="w-4 h-4" style={{ color: 'var(--primary)' }} />
             <span className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
-              Security Engineering
+              Cybersecurity Portfolio
             </span>
           </div>
+
+          {/* 🔵 2. 메인 제목 변경 */}
           <h1 
             className="mb-6" 
             style={{ 
               fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               lineHeight: '1.1',
-              fontWeight: '600',
+              fontWeight: '700',
               color: 'var(--foreground)'
             }}
           >
-            Building Secure Systems for a Digital World
+            실무 역량을 키워가는<br />
+            정보 & 보안
           </h1>
+
+          {/* 🔵 3. 소개 문장 전체 교체 */}
           <p 
             className="mb-8 max-w-2xl" 
             style={{ 
@@ -38,9 +47,12 @@ export function Hero() {
               color: 'var(--muted-foreground)'
             }}
           >
-            Security engineer specializing in penetration testing, secure architecture design, 
-            and vulnerability assessment. Protecting digital assets through proactive security measures.
+            네트워크·시스템·웹 보안 기반을 실습 중심으로 학습하며, 실제 공격·방어 환경을 구축해 
+            다양한 프로젝트와 CTF 참여, 워게임 제작을 경험했습니다.  
+            각 과정에서 핵심 개념을 직접 다뤄 보안 위협을 이해하고 대응하는 역량을 쌓아왔습니다.
           </p>
+
+          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               onClick={() => scrollToSection('projects')}
@@ -55,18 +67,19 @@ export function Hero() {
               View Projects
               <ArrowRight className="w-4 h-4" />
             </Button>
+
             <Button 
               onClick={() => scrollToSection('contact')}
               size="lg" 
               variant="outline"
-              style={{ 
-                borderRadius: '12px'
-              }}
+              style={{ borderRadius: '12px' }}
             >
               Contact Me
             </Button>
           </div>
         </div>
+
+        {/* RIGHT IMAGE AREA */}
         <div className="lg:col-span-5 flex items-center">
           <div 
             className="w-full h-96 rounded-[12px] overflow-hidden shadow-card"
@@ -74,7 +87,7 @@ export function Hero() {
           >
             <img
               src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Security Engineering"
+              alt="Cybersecurity"
               className="w-full h-full object-cover"
             />
           </div>
