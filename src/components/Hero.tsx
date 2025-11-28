@@ -12,11 +12,11 @@ export function Hero() {
   return (
     <section id="about" className="px-6 md:px-20 py-24 lg:py-32">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
-        
+
         {/* LEFT TEXT AREA */}
         <div className="lg:col-span-7 flex flex-col justify-center">
-          
-          {/* 🔵 1. 상단 라벨 변경 (Cybersecurity Portfolio) */}
+
+          {/* 🔵 1. 상단 라벨 */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-card w-fit mb-6 shadow-card">
             <Shield className="w-4 h-4" style={{ color: 'var(--primary)' }} />
             <span className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
@@ -24,10 +24,10 @@ export function Hero() {
             </span>
           </div>
 
-          {/* 🔵 2. 메인 제목 변경 */}
-          <h1 
-            className="mb-6" 
-            style={{ 
+          {/* 🔵 2. 메인 제목 */}
+          <h1
+            className="mb-6"
+            style={{
               fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               lineHeight: '1.1',
               fontWeight: '700',
@@ -38,27 +38,27 @@ export function Hero() {
             정보 & 보안
           </h1>
 
-          {/* 🔵 3. 소개 문장 전체 교체 */}
-          <p 
-            className="mb-8 max-w-2xl" 
-            style={{ 
+          {/* 🔵 3. 소개 문단 — 새 문장으로 교체 */}
+          <p
+            className="mb-8 max-w-2xl"
+            style={{
               fontSize: 'clamp(1rem, 2vw, 1.25rem)',
               lineHeight: '1.6',
               color: 'var(--muted-foreground)'
             }}
           >
-            네트워크·시스템·웹 보안 기반을 실습 중심으로 학습하며, 실제 공격·방어 환경을 구축해 
-            다양한 프로젝트와 CTF 참여, 워게임 제작을 경험했습니다.  
-            각 과정에서 핵심 개념을 직접 다뤄 보안 위협을 이해하고 대응하는 역량을 쌓아왔습니다.
+            네트워크·시스템·웹 보안을 실습 중심으로 익히고, 
+            CTF·워게임 제작 및 AI 해킹대회 참여를 통해
+            다양한 공격·방어 시나리오를 실무에 가깝게 직접 다뤄 왔습니다.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
+            <Button
               onClick={() => scrollToSection('projects')}
-              size="lg" 
+              size="lg"
               className="flex items-center justify-center gap-2"
-              style={{ 
+              style={{
                 backgroundColor: 'var(--primary)',
                 color: 'var(--primary-foreground)',
                 borderRadius: '12px'
@@ -68,9 +68,9 @@ export function Hero() {
               <ArrowRight className="w-4 h-4" />
             </Button>
 
-            <Button 
+            <Button
               onClick={() => scrollToSection('contact')}
-              size="lg" 
+              size="lg"
               variant="outline"
               style={{ borderRadius: '12px' }}
             >
@@ -81,7 +81,7 @@ export function Hero() {
 
         {/* RIGHT IMAGE AREA */}
         <div className="lg:col-span-5 flex items-center">
-          <div 
+          <div
             className="w-full h-96 rounded-[12px] overflow-hidden shadow-card"
             style={{ backgroundColor: 'var(--card)' }}
           >
@@ -92,6 +92,7 @@ export function Hero() {
             />
           </div>
         </div>
+
       </div>
     </section>
   );
