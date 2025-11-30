@@ -9,7 +9,7 @@ const projects = [
     // 🏆 신입 보안 포트폴리오용 최종 전문가 멘트 반영
     // ------------------------------------------
     title: "이기종 보안 장비 통합 네트워크 보안 인프라 구축", 
-    description: "Cisco ASA, pfSense, Snort, 라우팅 이중화를 기반으로 기업망 구조를 설계하고\nVPN·방화벽 정책·NIDS 탐지를 포함한 공격 시나리오 테스트를 수행했습니다.", // 최종 멘트와 줄바꿈(\n) 적용
+    description: "Cisco ASA, pfSense, Snort, 라우팅 이중화를 기반으로 기업망 구조를 설계하고 VPN·방화벽 정책·NIDS 탐지를 포함한 공격 시나리오 테스트를 수행했습니다.", // 최종 멘트와 줄바꿈(\n) 적용
     icon: Shield,
     tags: ["네트워크 보안", "침해 탐지(IDS/HIDS)", "방화벽/ACL 정책", "공격 시나리오 검증"], // '실습'을 '검증'으로 변경
     image: projectImage0,
