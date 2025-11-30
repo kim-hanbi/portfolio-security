@@ -15,22 +15,14 @@ const projects = [
     image: projectImage0,
     sections: [
       {
-        title: "Network Security Infrastructure",
+        title: "통합 보안 네트워크 아키텍처",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxjeWJlciUyMHNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NjM4NDEzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-            caption: "Network topology overview showing multi-layer security architecture"
+            url: projectImage0,
+            caption: "Cisco ASA, pfSense, Snort 기반 Inside/DMZ/Outside 분리 네트워크 아키텍처",
           },
-          {
-            url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Real-time threat monitoring dashboard with active alert system"
-          },
-          {
-            url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Network segmentation diagram with security zones and access controls"
-          }
         ],
-        description: "Comprehensive monitoring dashboard showing real-time threat detection across the entire network infrastructure. Implemented advanced intrusion detection systems and automated response protocols with 24/7 monitoring capabilities."
+        description: "ASA와 pfSense를 활용하여 기업망에서 요구되는 내부/DMZ/외부 영역 분리 구조를 구현했습니다. 특히, 라우팅 단에 HSRP/VRRP와 유사한 Active/Standby 이중화 구성을 적용하여 단일 장비 장애 발생 시에도 네트워크 중단 없이 서비스가 유지되는 고가용성 환경을 구축했음을 증명합니다."
       },
       {
         title: "Vulnerability Assessment & Penetration Testing",
