@@ -8,7 +8,7 @@ const projects = [
     description: "Inside–DMZ–Outside 구조로 네트워크를 설계하고 ASA Firewall, HSRP, OpenVPN, Snort IDS, OSSEC을 통합하여 접근 통제, VPN 인증, 고가용성, 공격 탐지를 구현한 보안 인프라 구축 프로젝트입니다.",
     icon: Shield,
     tags: ["ASA Firewall", "HSRP", "OpenVPN", "DMZ", "Snort IDS", "OSSEC", "Network Security"],
-    image: "/images/project1/0.png",
+    image: "images/project1/0.png",
     sections: [
       {
         title: "Network Security Infrastructure",
