@@ -1,6 +1,7 @@
 import { ExternalLink, Shield, Lock, Code } from "lucide-react";
 import { ProjectModal } from "./ProjectModal";
 import { useState } from "react";
+import projectImage0 from '../../public/images/project1/0.png';
 
 const projects = [
   {
@@ -11,7 +12,7 @@ const projects = [
     description: "이기종 시스템(Cisco ASA, pfSense, Snort) 간의 정책 및 라우팅 정합성을 확보하여 기업망을 구축했습니다.\n실제 DoS 공격 시나리오에서 시스템 성능 저하 없이 위협을 탐지하고 로그를 분석하는 운영 능력을 검증하며, 서비스 가용성과 보안의 균형을 맞췄습니다.", // 최종 멘트와 줄바꿈(\n) 적용
     icon: Shield,
     tags: ["네트워크 보안", "침해 탐지(IDS/HIDS)", "방화벽/ACL 정책", "공격 시나리오 검증"], // '실습'을 '검증'으로 변경
-    image: "https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxjeWJlciUyMHNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NjM4NDEzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: projectImage0,
     sections: [
       {
         title: "Network Security Infrastructure",
