@@ -9,22 +9,56 @@ const projects = [
     icon: Shield,
     tags: ["Penetration Testing", "Compliance", "Risk Assessment"],
     image: "https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlciUyMHNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NjM4NDEzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    images: [
+    sections: [
       {
-        url: "https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlciUyMHNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NjM4NDEzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        caption: "Network security infrastructure overview - comprehensive monitoring dashboard showing real-time threat detection"
+        title: "Network Security Infrastructure",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlciUyMHNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NjM4NDEzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            caption: "Network topology overview showing multi-layer security architecture"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Real-time threat monitoring dashboard with active alert system"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Network segmentation diagram with security zones and access controls"
+          }
+        ],
+        description: "Comprehensive monitoring dashboard showing real-time threat detection across the entire network infrastructure. Implemented advanced intrusion detection systems and automated response protocols with 24/7 monitoring capabilities."
       },
       {
-        url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        caption: "Security audit process - detailed vulnerability assessment report with risk prioritization matrix"
+        title: "Vulnerability Assessment & Penetration Testing",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Vulnerability assessment report with risk prioritization matrix"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Penetration testing methodology and attack vector analysis"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Security findings dashboard with severity classifications"
+          }
+        ],
+        description: "Detailed vulnerability assessment with risk prioritization matrix. Conducted thorough analysis of web applications, APIs, and network endpoints to identify security gaps. Systematic penetration testing methodology revealed critical vulnerabilities and informed comprehensive remediation strategies."
       },
       {
-        url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        caption: "Penetration testing results - identified critical vulnerabilities and remediation strategies implementation"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        caption: "Compliance dashboard - SOC 2 Type II certification metrics and continuous monitoring indicators"
+        title: "Compliance & Certification",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "SOC 2 Type II compliance metrics dashboard"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Continuous monitoring and audit trail visualization"
+          }
+        ],
+        description: "SOC 2 Type II certification metrics and continuous monitoring indicators. Established ongoing compliance framework with automated reporting and audit trails to maintain security standards and regulatory requirements."
       }
     ],
     details: "Led a comprehensive 6-month security audit project for a Fortune 500 financial institution. Conducted extensive penetration testing across web applications, network infrastructure, and mobile platforms. Identified and helped remediate 127 vulnerabilities including 15 critical issues.",
@@ -42,18 +76,56 @@ const projects = [
     icon: Lock,
     tags: ["Cloud Security", "Zero Trust", "IAM"],
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    images: [
+    sections: [
       {
-        url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        caption: "Zero trust architecture diagram - multi-cloud security framework with micro-segmentation layers"
+        title: "Zero Trust Architecture Design",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            caption: "Zero trust architecture diagram with micro-segmentation layers"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Identity and access management flow chart"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Security policy enforcement points across network segments"
+          }
+        ],
+        description: "Multi-cloud security framework with micro-segmentation layers spanning AWS, Azure, and GCP. Implemented identity-based access controls with continuous verification and least-privilege principles to ensure comprehensive security coverage."
       },
       {
-        url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        caption: "Cloud security implementation - AWS, Azure, and GCP integration with unified IAM policies"
+        title: "Multi-Cloud Integration & IAM",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Multi-cloud security orchestration platform"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Unified IAM policy management console"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Cross-cloud authentication and authorization workflow"
+          }
+        ],
+        description: "Unified IAM policies across AWS, Azure, and GCP platforms. Created seamless security orchestration enabling consistent policy enforcement regardless of cloud provider, with centralized identity management and single sign-on capabilities."
       },
       {
-        url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        caption: "Access control dashboard - real-time monitoring of user privileges and authentication events"
+        title: "Access Control & Continuous Monitoring",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Real-time access monitoring dashboard"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "User privilege analytics and anomaly detection"
+          }
+        ],
+        description: "Real-time monitoring of user privileges and authentication events. Implemented adaptive access controls with contextual risk assessment and automated threat response mechanisms for proactive security management."
       }
     ],
     details: "Architected and deployed a comprehensive zero trust security framework for a multi-cloud environment spanning AWS, Azure, and GCP. Implemented micro-segmentation, continuous verification, and least-privilege access controls across 500+ cloud resources.",
@@ -71,22 +143,60 @@ const projects = [
     icon: Code,
     tags: ["DevSecOps", "Automation", "SAST/DAST"],
     image: "https://images.unsplash.com/photo-1761519609249-c0ca325f81db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW5ldHJhdGlvbiUyMHRlc3RpbmclMjBjb2RlfGVufDF8fHx8MTc2Mzg3ODA4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    images: [
+    sections: [
       {
-        url: "https://images.unsplash.com/photo-1761519609249-c0ca325f81db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW5ldHJhdGlvbiUyMHRlc3RpbmclMjBjb2RlfGVufDF8fHx8MTc2Mzg3ODA4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        caption: "DevSecOps pipeline architecture - automated security testing integrated into CI/CD workflow"
+        title: "DevSecOps Pipeline Architecture",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1761519609249-c0ca325f81db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW5ldHJhdGlvbiUyMHRlc3RpbmclMjBjb2RlfGVufDF8fHx8MTc2Mzg3ODA4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            caption: "CI/CD pipeline with integrated security testing stages"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Automated security gate workflow diagram"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Build and deployment pipeline with security checkpoints"
+          }
+        ],
+        description: "Automated security testing integrated into CI/CD workflow. Built comprehensive pipeline combining static analysis, dynamic testing, and dependency scanning at every commit to catch vulnerabilities early in the development lifecycle."
       },
       {
-        url: "https://images.unsplash.com/photo-1542903660-eedba2cda473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        caption: "Code analysis dashboard - SAST and DAST tools showing vulnerability detection in real-time"
+        title: "SAST & DAST Integration",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1542903660-eedba2cda473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Real-time SAST code analysis dashboard"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "DAST runtime vulnerability scanning results"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Custom security rule engine configuration"
+          }
+        ],
+        description: "SAST and DAST tools showing vulnerability detection in real-time. Implemented custom security rules tailored to organization's technology stack and security requirements with automated remediation suggestions."
       },
       {
-        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        caption: "Security metrics visualization - tracking vulnerability trends and remediation progress over time"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        caption: "Automated testing results - comprehensive security scan reports with detailed remediation guidance"
+        title: "Security Metrics & Reporting",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Vulnerability trends and remediation metrics"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Executive security posture dashboard"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Automated vulnerability ticket management system"
+          }
+        ],
+        description: "Tracking vulnerability trends and remediation progress over time. Created executive dashboards providing visibility into security posture and improvement metrics with automated ticket creation and severity-based SLA management."
       }
     ],
     details: "Built an enterprise-grade DevSecOps pipeline that automatically scans code for security vulnerabilities at every stage of development. Integrated multiple security testing tools and created custom rules to catch organization-specific security issues.",

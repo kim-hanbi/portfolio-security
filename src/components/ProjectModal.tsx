@@ -7,6 +7,12 @@ interface ProjectImage {
   caption: string;
 }
 
+interface ProjectSection {
+  title: string;
+  images: ProjectImage[];
+  description: string;
+}
+
 interface ProjectModalProps {
   project: {
     title: string;
@@ -14,7 +20,7 @@ interface ProjectModalProps {
     icon: any;
     tags: string[];
     image: string;
-    images?: ProjectImage[];
+    sections?: ProjectSection[];
     details?: string;
     technologies?: string[];
     results?: string[];
@@ -23,23 +29,109 @@ interface ProjectModalProps {
   onClose: () => void;
 }
 
-export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-  if (!isOpen) return null;
-
-  // 이미지 갤러리 데이터 (images가 있으면 사용, 없으면 기본 image 사용)
-  const imageGallery = project.images && project.images.length > 0 
-    ? project.images 
-    : [{ url: project.image, caption: project.title }];
+// 섹션별 이미지 슬라이더 컴포넌트
+function ImageSlider({ images }: { images: ProjectImage[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % imageGallery.length);
+    setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + imageGallery.length) % imageGallery.length);
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
+
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div className="mb-4">
+      <div className="relative rounded-[12px] overflow-hidden mb-3 shadow-card" style={{ backgroundColor: 'var(--card)' }}>
+        <img
+          src={images[currentIndex].url}
+          alt={images[currentIndex].caption}
+          className="w-full object-cover"
+          style={{ maxHeight: '400px' }}
+        />
+        
+        {/* 이미지 네비게이션 버튼 (이미지가 2개 이상일 때만 표시) */}
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}
+            >
+              <ChevronLeft className="w-6 h-6" style={{ color: 'var(--foreground)' }} />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
+              style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}
+            >
+              <ChevronRight className="w-6 h-6" style={{ color: 'var(--foreground)' }} />
+            </button>
+            
+            {/* 이미지 인디케이터 */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className="w-2 h-2 rounded-full transition-all"
+                  style={{ 
+                    backgroundColor: index === currentIndex 
+                      ? 'var(--primary)' 
+                      : 'rgba(255, 255, 255, 0.5)'
+                  }}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* 현재 이미지 설명 */}
+      <div className="px-2">
+        <p style={{ color: 'var(--muted-foreground)', fontSize: '0.875rem', lineHeight: '1.5' }}>
+          {images[currentIndex].caption}
+        </p>
+        {images.length > 1 && (
+          <p style={{ color: 'var(--muted-foreground)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
+            {currentIndex + 1} / {images.length}
+          </p>
+        )}
+      </div>
+
+      {/* 썸네일 미리보기 (이미지가 2개 이상일 때만 표시) */}
+      {images.length > 1 && (
+        <div className="flex gap-2 mt-3 overflow-x-auto pb-2">
+          {images.map((img, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className="flex-shrink-0 rounded-lg overflow-hidden transition-all"
+              style={{ 
+                border: index === currentIndex 
+                  ? '3px solid var(--primary)' 
+                  : '3px solid transparent',
+                opacity: index === currentIndex ? 1 : 0.6
+              }}
+            >
+              <img
+                src={img.url}
+                alt={img.caption}
+                className="w-20 h-20 object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+  if (!isOpen) return null;
 
   return (
     <div 
@@ -74,90 +166,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         </div>
 
         <div className="p-6">
-          {/* 이미지 갤러리 */}
-          <div className="mb-6">
-            <div className="relative rounded-[12px] overflow-hidden mb-4" style={{ backgroundColor: 'var(--card)' }}>
-              <img
-                src={imageGallery[currentImageIndex].url}
-                alt={imageGallery[currentImageIndex].caption}
-                className="w-full h-80 object-cover"
-              />
-              
-              {/* 이미지 네비게이션 버튼 (이미지가 2개 이상일 때만 표시) */}
-              {imageGallery.length > 1 && (
-                <>
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}
-                  >
-                    <ChevronLeft className="w-6 h-6" style={{ color: 'var(--foreground)' }} />
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)' }}
-                  >
-                    <ChevronRight className="w-6 h-6" style={{ color: 'var(--foreground)' }} />
-                  </button>
-                  
-                  {/* 이미지 인디케이터 */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                    {imageGallery.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentImageIndex(index)}
-                        className="w-2 h-2 rounded-full transition-all"
-                        style={{ 
-                          backgroundColor: index === currentImageIndex 
-                            ? 'var(--primary)' 
-                            : 'rgba(255, 255, 255, 0.5)'
-                        }}
-                      />
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-
-            {/* 현재 이미지 설명 */}
-            <div className="px-2">
-              <p style={{ color: 'var(--muted-foreground)', fontSize: '0.875rem', lineHeight: '1.5' }}>
-                {imageGallery[currentImageIndex].caption}
-              </p>
-              {imageGallery.length > 1 && (
-                <p style={{ color: 'var(--muted-foreground)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-                  {currentImageIndex + 1} / {imageGallery.length}
-                </p>
-              )}
-            </div>
-
-            {/* 썸네일 미리보기 (이미지가 2개 이상일 때만 표시) */}
-            {imageGallery.length > 1 && (
-              <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
-                {imageGallery.map((img, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className="flex-shrink-0 rounded-lg overflow-hidden transition-all"
-                    style={{ 
-                      border: index === currentImageIndex 
-                        ? '3px solid var(--primary)' 
-                        : '3px solid transparent',
-                      opacity: index === currentImageIndex ? 1 : 0.6
-                    }}
-                  >
-                    <img
-                      src={img.url}
-                      alt={img.caption}
-                      className="w-20 h-20 object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
           <div className="mb-6">
             <h3 className="mb-3" style={{ fontWeight: '600', color: 'var(--foreground)', fontSize: '1.25rem' }}>
               Overview
@@ -175,6 +183,40 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               <p style={{ color: 'var(--muted-foreground)', lineHeight: '1.6' }}>
                 {project.details}
               </p>
+            </div>
+          )}
+
+          {/* Sections 렌더링 - 각 섹션마다 독립적인 이미지 슬라이더 */}
+          {project.sections && project.sections.length > 0 && (
+            <div className="mb-6">
+              {project.sections.map((section, index) => (
+                <div key={index} className="mb-12">
+                  <h3 
+                    className="mb-4" 
+                    style={{ fontWeight: '600', color: 'var(--foreground)', fontSize: '1.25rem' }}
+                  >
+                    {section.title}
+                  </h3>
+                  
+                  {/* 섹션별 이미지 슬라이더 */}
+                  <ImageSlider images={section.images} />
+                  
+                  <p 
+                    className="mt-4"
+                    style={{ color: 'var(--muted-foreground)', lineHeight: '1.6' }}
+                  >
+                    {section.description}
+                  </p>
+                  
+                  {/* 섹션 구분선 (마지막 섹션 제외) */}
+                  {index < project.sections.length - 1 && (
+                    <div 
+                      className="w-full my-8"
+                      style={{ height: '1px', backgroundColor: 'var(--border)' }}
+                    />
+                  )}
+                </div>
+              ))}
             </div>
           )}
 
