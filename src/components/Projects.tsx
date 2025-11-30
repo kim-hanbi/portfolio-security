@@ -4,11 +4,11 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "Enterprise Security Audit",
-    description: "Comprehensive security assessment for a Fortune 500 company, identifying critical vulnerabilities and implementing remediation strategies.",
+    title: "기업형 보안 인프라 구축 프로젝트",
+    description: "기업 내부망·DMZ·외부망 구조를 직접 설계하고 VPN, 방화벽, IDS/HIDS, 모니터링을 통합 구성한 보안 인프라 구축 프로젝트입니다. 실제 공격 시나리오를 통해 탐지·분석 과정을 구현하며 기업형 보안 운영 환경을 재현했습니다.",
     icon: Shield,
-    tags: ["Penetration Testing", "Compliance", "Risk Assessment"],
-    image: "https://images.unsplash.com/photo-1762340916350-ad5a3d620c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlciUyMHNlY3VyaXR5JTIwbmV0d29ya3xlbnwxfHx8fDE3NjM4NDEzMzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    tags: ["네트워크 보안", "침해 탐지(IDS/HIDS)", "방화벽/ACL 정책", "공격 시나리오 실습"],
+    image: "/images/project1/0.png",
     sections: [
       {
         title: "Network Security Infrastructure",
