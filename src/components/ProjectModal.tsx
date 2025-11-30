@@ -180,7 +180,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               <h3 className="mb-3" style={{ fontWeight: '600', color: 'var(--foreground)', fontSize: '1.25rem' }}>
                 Project Details
               </h3>
-              <p style={{ color: 'var(--muted-foreground)', lineHeight: '1.6' }}>
+              <p style={{ color: 'var(--muted-foreground)', lineHeight: '1.6', whiteSpace: 'pre-line' }}>
                 {project.details}
               </p>
             </div>

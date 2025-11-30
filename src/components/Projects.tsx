@@ -65,7 +65,13 @@ const projects = [
         description: "SOC 2 Type II certification metrics and continuous monitoring indicators. Established ongoing compliance framework with automated reporting and audit trails to maintain security standards and regulatory requirements."
       }
     ],
-    details: "Led a comprehensive 6-month security audit project for a Fortune 500 financial institution. Conducted extensive penetration testing across web applications, network infrastructure, and mobile platforms. Identified and helped remediate 127 vulnerabilities including 15 critical issues.",
+    details: `본 프로젝트는 Cisco ASA, pfSense, Snort 등 서로 다른 종류의 보안 장비들을 통합하여 기업 수준의 내부·외부·DMZ 분리 네트워크를 구축하는 데 중점을 두었습니다.
+
+1. 인프라 구축 및 안정성: ASA와 pfSense 장비 간 정책 및 라우팅 설정을 기반으로 Inside/DMZ/Outside 영역을 분리했으며, 라우팅 단에 Active/Standby 이중 연결을 구성하여 시스템 고장에 대비했습니다. 이를 통해 서비스 안정성을 확보했습니다.
+
+2. 탐지 및 분석 논리: 로그를 기반으로 Command Injection 및 DoS Attack 등 5가지 시나리오에 대한 맞춤형 탐지 규칙을 Snort에 직접 적용했습니다.
+
+3. 최종 운영 검증: DoS 공격 상황에서 방화벽 규칙이 정확히 작동하며, 네트워크 중단 없이 탐지 시스템이 안정적으로 운용됨을 입증했습니다.`,
     technologies: ["Burp Suite", "Metasploit", "Nessus", "Wireshark", "Python", "SQL"],
     results: [
       "Identified 127 vulnerabilities across the organization",
