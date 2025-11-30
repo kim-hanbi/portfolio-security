@@ -6,8 +6,8 @@ const projects = [
   {
     title: "기업형 네트워크 보안 구축",
     description: [
-      "Inside–DMZ–Outside 아키텍처 기반으로 방화벽·VPN·고가용성·IDS/OSSEC을 통합 구성하여",
-      "기업 환경과 유사한 보안 인프라를 구축한 프로젝트입니다."
+      "Inside–DMZ–Outside 아키텍처 기반으로 방화벽·VPN·고가용성·IDS/OSSEC을 통합해",
+      "기업형 보안 인프라를 구축한 프로젝트입니다."
     ],
     icon: Shield,
     tags: ["ASA Firewall", "HSRP", "OpenVPN", "DMZ", "Snort IDS", "OSSEC", "Network Security"],
