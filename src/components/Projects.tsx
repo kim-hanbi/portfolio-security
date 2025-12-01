@@ -1,8 +1,10 @@
 import { ExternalLink, Shield, Lock, Code } from "lucide-react";
 import { ProjectModal } from "./ProjectModal";
 import { useState } from "react";
-import projectImage0 from '../../public/images/project1/0.png';
-
+import projectImage0 from '/images/project1/0.png'; 
+import projectImage1 from '/images/project1/1.png'; 
+import projectImage2 from '/images/project1/2.png'; 
+import projectImage3 from '/images/project1/3.png';
 const projects = [
   {
     // ------------------------------------------
@@ -18,16 +20,16 @@ const projects = [
         title: "Vulnerability Assessment & Penetration Testing",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Vulnerability assessment report with risk prioritization matrix"
+            url: projectImage1,
+            caption: "고가용성 구현 및 안전성 입증"
           },
           {
-            url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Penetration testing methodology and attack vector analysis"
+            url: projectImage2,
+            caption: "Custom Snort Rule 작성"
           },
           {
-            url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Security findings dashboard with severity classifications"
+            url: projectImage3,
+            caption: "OpenVPN 접속 성공 및 IP 할당"
           }
         ],
         description: "Detailed vulnerability assessment with risk prioritization matrix. Conducted thorough analysis of web applications, APIs, and network endpoints to identify security gaps. Systematic penetration testing methodology revealed critical vulnerabilities and informed comprehensive remediation strategies."

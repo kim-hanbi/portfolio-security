@@ -46,14 +46,13 @@ function ImageSlider({ images }: { images: ProjectImage[] }) {
   return (
     <div className="mb-4">
       <div
-        className="relative rounded-[12px] overflow-hidden mb-3 shadow-card"
+        className="relative rounded-[12px] overflow-hidden mb-3 shadow-card h-[400px] flex justify-center items-center"
         style={{ backgroundColor: "var(--card)" }}
       >
         <img
           src={images[currentIndex].url}
           alt={images[currentIndex].caption}
-          className="w-full object-cover"
-          style={{ maxHeight: "400px" }}
+          className="w-full object-contain"
         />
 
         {images.length > 1 && (
@@ -177,8 +176,8 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
     <img
       src={project.image}
       alt={`${project.title} 대표 이미지`}
-      className="w-full object-cover rounded-[12px] shadow-card"
-      style={{ maxHeight: "400px" }}
+      className="w-full object-contain rounded-[12px] shadow-card"
+      style={{ maxHeight: "400px", width: "100%" }}
     />
   </div>
 )}
