@@ -9,21 +9,11 @@ const projects = [
     // 🏆 신입 보안 포트폴리오용 최종 전문가 멘트 반영
     // ------------------------------------------
     title: "기업형 보안 인프라 구축 프로젝트", 
-    description: "ASA–pfSense–Snort 기반 보안 인프라를 구성하고, DoS 시나리오로 탐지·정책 동작과 가용성을 검증한\n프로젝트입니다.",
+    description: "Cisco ASA/pfSense 기반 Active/Standby 3계층 망분리 아키텍처 구축으로 최대 가용성 및 로그 신뢰성 확보, Snort 침해 탐지 및 자동 차단 연동을 통한 위협 대응 효율성 극대화",
     icon: Shield,
     tags: ["네트워크 보안", "침해 탐지(IDS/HIDS)", "방화벽/ACL 정책", "공격 시나리오 검증"], // '실습'을 '검증'으로 변경
     image: projectImage0,
     sections: [
-      {
-        title: "통합 보안 네트워크 아키텍처",
-        images: [
-          {
-            url: projectImage0,
-            caption: "Cisco ASA, pfSense, Snort 기반 Inside/DMZ/Outside 분리 네트워크 아키텍처",
-          },
-        ],
-        description: "ASA와 pfSense를 활용하여 기업망에서 요구되는 내부/DMZ/외부 영역 분리 구조를 구현했습니다. 특히, 라우팅 단에 HSRP/VRRP와 유사한 Active/Standby 이중화 구성을 적용하여 단일 장비 장애 발생 시에도 네트워크 중단 없이 서비스가 유지되는 고가용성 환경을 구축했음을 증명합니다."
-      },
       {
         title: "Vulnerability Assessment & Penetration Testing",
         images: [
@@ -57,9 +47,7 @@ const projects = [
         description: "SOC 2 Type II certification metrics and continuous monitoring indicators. Established ongoing compliance framework with automated reporting and audit trails to maintain security standards and regulatory requirements."
       }
     ],
-    details: `본 프로젝트는 Cisco ASA, pfSense, Snort 등 서로 다른 종류의 보안 장비들을 통합하여 기업 수준의 내부·외부·DMZ 분리 네트워크를 구축하는 데 중점을 두었습니다.
-
-1. 인프라 구축 및 안정성: ASA와 pfSense 장비 간 정책 및 라우팅 설정을 기반으로 Inside/DMZ/Outside 영역을 분리했으며, 라우팅 단에 Active/Standby 이중 연결을 구성하여 시스템 고장에 대비했습니다. 이를 통해 서비스 안정성을 확보했습니다.
+    details: `1. 인프라 구축 및 안정성: ASA와 pfSense 장비 간 정책 및 라우팅 설정을 기반으로 Inside/DMZ/Outside 영역을 분리했으며, 라우팅 단에 Active/Standby 이중 연결을 구성하여 시스템 고장에 대비했습니다. 이를 통해 서비스 안정성을 확보했습니다.
 
 2. 탐지 및 분석 논리: 로그를 기반으로 Command Injection 및 DoS Attack 등 5가지 시나리오에 대한 맞춤형 탐지 규칙을 Snort에 직접 적용했습니다.
 

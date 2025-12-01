@@ -172,6 +172,16 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         </div>
 
         <div className="p-6">
+          {project.image && (
+  <div className="mb-6">
+    <img
+      src={project.image}
+      alt={`${project.title} 대표 이미지`}
+      className="w-full object-cover rounded-[12px] shadow-card"
+      style={{ maxHeight: "400px" }}
+    />
+  </div>
+)}
           {/* Overview */}
           <div className="mb-6">
             <h3
