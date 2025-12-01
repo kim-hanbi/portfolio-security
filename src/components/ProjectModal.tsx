@@ -177,7 +177,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
       src={project.image}
       alt={`${project.title} 대표 이미지`}
       className="w-full object-contain rounded-[12px] shadow-card"
-      style={{ maxHeight: "400px", width: "100%" }}
+      style={{ maxHeight: "400px", width: "100%"}}
     />
   </div>
 )}
@@ -233,7 +233,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
                   <p
                     className="mt-4"
-                    style={{ color: "var(--muted-foreground)", lineHeight: "1.6" }}
+                    style={{ color: "var(--muted-foreground)", lineHeight: "1.6", whiteSpace: "pre-line" }}
                   >
                     {section.description}
                   </p>

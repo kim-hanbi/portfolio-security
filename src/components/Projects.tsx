@@ -5,6 +5,11 @@ import projectImage0 from '/images/project1/0.png';
 import projectImage1 from '/images/project1/1.png'; 
 import projectImage2 from '/images/project1/2.png'; 
 import projectImage3 from '/images/project1/3.png';
+import projectImage4 from '/images/project1/4.png';
+import projectImage5 from '/images/project1/5.png';
+import projectImage6 from '/images/project1/6.png';
+import projectImage7 from '/images/project1/7.png';
+
 const projects = [
   {
     // ------------------------------------------
@@ -17,7 +22,7 @@ const projects = [
     image: projectImage0,
     sections: [
       {
-        title: "Vulnerability Assessment & Penetration Testing",
+        title: "I. 3계층 망분리 구조 및 무중단 시스템 구축",
         images: [
           {
             url: projectImage1,
@@ -25,28 +30,38 @@ const projects = [
           },
           {
             url: projectImage2,
-            caption: "Custom Snort Rule 작성"
-          },
-          {
-            url: projectImage3,
             caption: "OpenVPN 접속 성공 및 IP 할당"
-          }
+          },
         ],
-        description: "Detailed vulnerability assessment with risk prioritization matrix. Conducted thorough analysis of web applications, APIs, and network endpoints to identify security gaps. Systematic penetration testing methodology revealed critical vulnerabilities and informed comprehensive remediation strategies."
-      },
+        description: `1. 무중단 시스템 구현 (이중화): pfSense 방화벽을 Active/Standby 이중 구조로 만들어 단일 고장 지점을 제거했습니다. 명령어 확인 결과, 가상 IP 통신 성공을 통해 메인 장비 고장 시에도 서비스가 끊김 없이 계속됨을 입증했습니다.
+
+2. 원격 접속 보안 체계: pfSense에 OpenVPN 서버를 구축했습니다. 인증 후 내부망 IP(10.10.10.2)를 할당받아, 외부에서도 보안 터널을 통해 안전하게 회사 자원에 접근 가능한 환경을 확립했습니다.
+
+`,
+      }
+      ,
       {
-        title: "Compliance & Certification",
+        title: "II. 접근 규칙 및 방화벽 기능 검증",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "SOC 2 Type II compliance metrics dashboard"
+            url: projectImage3,
+            caption: "관리자 접속 규칙 검증 (허용)"
           },
           {
-            url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Continuous monitoring and audit trail visualization"
+            url: projectImage4,
+            caption: "관리자 접속 규칙 검증 (DMZ 허용)"
+          },
+          {
+            url: projectImage5,
+            caption: "통신 규칙 신뢰성 확보 (차단)"
           }
         ],
-        description: "SOC 2 Type II certification metrics and continuous monitoring indicators. Established ongoing compliance framework with automated reporting and audit trails to maintain security standards and regulatory requirements."
+        description: `1. 관리자 접속 규칙 검증 (허용): Inside(PC1)에서 ASA 관리 인터페이스로의 Telnet 접속이 정상적으로 허용됨을 확인했습니다.
+
+        2. 관리자 접속 규칙 검증 (DMZ 허용): DMZ(Webterm2)에서도 ASA 관리 인터페이스로의 Telnet 접속이 허용됨을 확인했습니다. Inside와 DMZ 양쪽에서 관리자 트래픽 허용이 정확히 설정되었음을 증명합니다.
+        
+        3. 통신 규칙 신뢰성 확보 (차단): PC1에서 ASA로 불필요한 HTTPS 접속을 시도하여 연결 오류를 확인했습니다. 이는 필요한 것만 허용하고 나머지는 차단하는 최소 권한 원칙이 지켜지고 있음을 입증합니다.
+        `
       }
     ],
     details: `1. 인프라 구축 및 안정성: ASA와 pfSense 장비 간 정책 및 라우팅 설정을 기반으로 Inside/DMZ/Outside 영역을 분리했으며, 라우팅 단에 Active/Standby 이중 연결을 구성하여 시스템 고장에 대비했습니다. 이를 통해 서비스 안정성을 확보했습니다.
