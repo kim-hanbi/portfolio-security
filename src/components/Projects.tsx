@@ -61,8 +61,53 @@ const projects = [
         2. 관리자 접속 규칙 검증 (DMZ 허용): DMZ(Webterm2)에서도 ASA 관리 인터페이스로의 Telnet 접속이 허용됨을 확인했습니다. Inside와 DMZ 양쪽에서 관리자 트래픽 허용이 정확히 설정되었음을 보여줍니다.
         
         3. 통신 규칙 신뢰성 확보 (차단): PC1에서 ASA로 불필요한 HTTPS 접속을 시도하여 연결 오류를 확인했습니다. 이는 필요한 것만 허용하고 나머지는 차단하는 최소 권한 원칙이 지켜지고 있음을 나타냅니다.
+        
+`,
+      }
+      ,
+      {
+        title: "III. 맞춤형 침입 탐지 시스템 구축 및 운영",
+        images: [
+          {
+            url: projectImage6,
+            caption: "Custom Rule 설계 능력 입증"
+          },
+          {
+            url: projectImage7,
+            caption: "실시간 탐지 검증"
+          },
+        ],
+        description: `1. Custom Rule 설계 능력 입증: DDoS, 해킹 코드 주입 등 핵심 위협에 대응하는 Snort Custom Rule 목록을 직접 작성하여 적용했습니다. 이는 패킷 분석 기반의 탐지 로직 설계 능력을 보여줍니다.
+        
+        2. 실시간 탐지 검증: SYN Flag Scanning 공격을 시뮬레이션하여 Snort가 실시간으로 패턴을 매칭하고 로그를 기록함을 확인했습니다. 이는 탐지 시스템이 실제 운영 환경에서 유효하게 작동함을 나타냅니다.
+         
+`,
+      }
+      ,
+      {
+        title: "II. 접근 규칙 및 방화벽 기능 검증3",
+        images: [
+          {
+            url: projectImage3,
+            caption: "관리자 접속 규칙 검증 (허용)"
+          },
+          {
+            url: projectImage4,
+            caption: "관리자 접속 규칙 검증 (DMZ 허용)"
+          },
+          {
+            url: projectImage5,
+            caption: "통신 규칙 신뢰성 확보 (차단)"
+          }
+        ],
+        description: `1. 관리자 접속 규칙 검증 (허용): Inside(PC1)에서 ASA 관리 인터페이스로의 Telnet 접속이 정상적으로 허용됨을 확인했습니다.
+
+        2. 관리자 접속 규칙 검증 (DMZ 허용): DMZ(Webterm2)에서도 ASA 관리 인터페이스로의 Telnet 접속이 허용됨을 확인했습니다. Inside와 DMZ 양쪽에서 관리자 트래픽 허용이 정확히 설정되었음을 보여줍니다.
+        
+        3. 통신 규칙 신뢰성 확보 (차단): PC1에서 ASA로 불필요한 HTTPS 접속을 시도하여 연결 오류를 확인했습니다. 이는 필요한 것만 허용하고 나머지는 차단하는 최소 권한 원칙이 지켜지고 있음을 나타냅니다.
         `
       }
+    
     ],
     details: `1. 인프라 구축 및 안정성: ASA와 pfSense 장비 간 정책 및 라우팅 설정을 기반으로 Inside/DMZ/Outside 영역을 분리했으며, 라우팅 단에 Active/Standby 이중 연결을 구성하여 시스템 고장에 대비했습니다. 이를 통해 서비스 안정성을 확보했습니다.
 
@@ -102,6 +147,26 @@ const projects = [
         ],
         description: "Multi-cloud security framework with micro-segmentation layers spanning AWS, Azure, and GCP. Implemented identity-based access controls with continuous verification and least-privilege principles to ensure comprehensive security coverage."
       },
+      //테스트용
+         {
+        title: "Zero Trust Architecture Design2",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            caption: "Zero trust architecture diagram with micro-segmentation layers"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Identity and access management flow chart"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Security policy enforcement points across network segments"
+          }
+        ],
+        description: "Multi-cloud security framework with micro-segmentation layers spanning AWS, Azure, and GCP. Implemented identity-based access controls with continuous verification and least-privilege principles to ensure comprehensive security coverage."
+      },
+      //테스트용
       {
         title: "Multi-Cloud Integration & IAM",
         images: [
