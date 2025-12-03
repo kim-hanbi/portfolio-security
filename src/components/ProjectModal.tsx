@@ -326,29 +326,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             </div>
           </div>
           
-             {/* Tags */}
-          <div className="mb-4">
-            <h3
-              className="mb-3"
-              style={{ fontWeight: "600", color: "var(--foreground)", fontSize: "1.25rem" }}
-            >
-              Tags
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 rounded-lg text-sm"
-                  style={{
-                    backgroundColor: "var(--card)",
-                    color: "var(--muted-foreground)",
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+            
 
           {/* Close Button */}
           <Button
