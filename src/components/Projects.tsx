@@ -98,12 +98,12 @@ const projects = [
 2. 탐지 및 분석 논리: 로그를 기반으로 Command Injection 및 DoS Attack 등 5가지 시나리오에 대한 맞춤형 탐지 규칙을 Snort에 직접 적용했습니다.
 
 3. 최종 운영 검증: DoS 공격 상황에서 방화벽 규칙이 정확히 작동하며, 네트워크 중단 없이 탐지 시스템이 안정적으로 운용됨을 입증했습니다.`,
-    technologies: ["Burp Suite", "Metasploit", "Nessus", "Wireshark", "Python", "SQL"],
+    technologies: ["Cisco ASA", "pfSense", "Snort", "OpenVPN", "Zabbix"],
     results: [
-      "Identified 127 vulnerabilities across the organization",
-      "15 critical security issues discovered and remediated",
-      "Achieved SOC 2 Type II compliance certification",
-      "Reduced security incident response time by 65%"
+      "Cisco ASA/pfSense 기반 3계층(Inside/DMZ/Outside) 망분리 보안 아키텍처 구축",
+      "Active/Standby 고가용성 구성을 통한 단일 장애점(SPOF) 제거 및 무중단 운영 확보",
+      "OpenVPN을 활용한 암호화된 원격 접속 환경 구현 및 ACL 기반의 최소 권한 접근 통제 적용",
+      "Snort와 Zabbix를 연동하여 공격 시나리오(DDoS 등)를 식별하는 실시간 위협 탐지 체계 확립"
     ]
   },
   {
