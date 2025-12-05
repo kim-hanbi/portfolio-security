@@ -9,7 +9,7 @@ import projectImage4 from '/images/project1/4.png';
 import projectImage5 from '/images/project1/5.png';
 import projectImage6 from '/images/project1/6.png';
 import projectImage7 from '/images/project1/7.png';
-
+import projectImage8 from '/images/project2/0.PNG'; 
 const projects = [
   {
     // ------------------------------------------
@@ -107,11 +107,11 @@ const projects = [
     ]
   },
   {
-    title: "Zero Trust Architecture",
-    description: "Designed and implemented zero trust security model for cloud infrastructure, reducing attack surface by 70%.",
+    title: "기업형 통합 보안 관제 시스템 구축 및 위협 대응 시나리오",
+    description: "GNS3 기반 Web/DB 서비스 망 및 통합 관제 시스템 구축으로 인프라 전반의 보안 가시성 확보, 실전 공격 시나리오 수행 및 파일 변조 탐지 연동을 통한 자동화된 침해 사고 대응 체계 확립",
     icon: Lock,
-    tags: ["Cloud Security", "Zero Trust", "IAM"],
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    tags: ["보안관제", "ESM", "침해사고대응", "Zabbix", "Wazuh"],
+    image: projectImage8,
     sections: [
       {
         title: "Zero Trust Architecture Design",
