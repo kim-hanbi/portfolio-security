@@ -14,7 +14,15 @@ import projectImage9 from '/images/project2/3.PNG';
 import projectImage10 from '/images/project2/8.PNG';
 import projectImage11 from '/images/project2/13.PNG';
 import projectImage12 from '/images/project2/6.PNG';
-import projectImage13 from '/images/project2/12.PNG';
+import projectImage13 from '/images/project2/7.PNG';
+import projectImage14 from '/images/project2/12.PNG';
+import projectImage15 from '/images/project2/9.PNG';
+import projectImage16 from '/images/project2/21.PNG';
+import projectImage17 from '/images/project2/25.PNG';
+import projectImage18 from '/images/project2/1.PNG';
+import projectImage19 from '/images/project2/26.PNG';
+import projectImage20 from '/images/project2/27.PNG';
+import projectImage21 from '/images/project2/5.PNG';
 const projects = [
   {
     // ------------------------------------------
@@ -137,12 +145,12 @@ const projects = [
         description: `1. 3계층 서비스 망 분리 및 접근성 검증: 구축된 3계층 네트워크 위에서 라우팅 및 방화벽 정책이 정상 동작함을 입증하기 위해, Web 서버 접속 테스트를 수행했습니다. 망 분리 환경에서도 서비스 접속이 정상적으로 이루어짐을 검증했습니다.
 
 2. 데이터베이스 스키마 설계 및 서비스 연동: 단순 네트워크 연결을 넘어, 실제 애플리케이션 데이터를 처리하는 MariaDB를 구축하고 스키마(Skillcodes Table)를 직접 설계했습니다. 이를 통해 서비스 계층(Layer 7)의 구조를 확립하고, 실시간 DB 성능 관제를 통해 웹과 DB 간의 안정적인 연동 상태를 확인했습니다.
-        
+       
         `,
       },
 
          {
-        title: "중앙 집중형 모니터링 및 가시성 확보",
+        title: "II. 중앙 집중형 모니터링 및 가시성 확보",
         images: [
           {
             url: projectImage12,
@@ -150,46 +158,68 @@ const projects = [
           },
           {
             url: projectImage13,
+            caption: "서버별 상세 리소스(Disk/CPU) 모니터링"
+          },
+          {
+            url: projectImage14,
             caption: "Syslog 기반 로그 통합 수집 및 분석"
           },
         ],
         description: `1. 인프라 통합 관제 대시보드 구축: 분산된 인프라 환경의 효율적인 관제를 위해 통합 모니터링 도구인 Zabbix를 도입했습니다. 서버 및 네트워크 장비의 리소스 현황과 가용성 상태를 실시간 대시보드로 시각화하여, 장애 발생 시 즉각적으로 인지하고 대응할 수 있는 신속한 장애 대응 체계를 확립했습니다.
 
         2. Syslog 기반 로그 통합 분석 체계: 개별 서버에 접속하여 로그를 확인하는 비효율을 개선하기 위해, rsyslog 프로토콜을 활용해 모든 시스템 로그를 중앙 서버로 수집했습니다. 수집된 로그는 LogAnalyzer 웹 인터페이스를 통해 통합 검색 및 분석이 가능하도록 하여, 침해 사고 분석 시 로그 추적 시간을 획기적으로 단축했습니다.
-
+        
         `,
       },
       {
-        title: "Multi-Cloud Integration & IAM",
+        title: "III. 호스트 기반 위협 탐지 및 무결성 검증",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Multi-cloud security orchestration platform"
+            url: projectImage15,
+            caption: "파일 무결성 모니터링 기반 변조 탐지 로그"
           },
           {
-            url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Unified IAM policy management console"
+            url: projectImage16,
+            caption: "위협 등급(Severity)별 보안 이벤트 시각화"
           },
           {
-            url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Cross-cloud authentication and authorization workflow"
+            url: projectImage17,
+            caption: "Linux 시스템 접근 이력(btmp/wtmp) 감사"
           }
         ],
-        description: "Unified IAM policies across AWS, Azure, and GCP platforms. Created seamless security orchestration enabling consistent policy enforcement regardless of cloud provider, with centralized identity management and single sign-on capabilities."
+        description: ` 1. 호스트 침입 탐지(HIDS) 및 무결성 검증: 네트워크 경계를 우회하는 내부 위협에 대비해 Wazuh(OSSEC)를 도입했습니다. 특히 파일 무결성 모니터링 정책을 적용하여, 공격자가 시스템 계정 파일(/etc/shadow)을 변조하는 즉시 탐지 로그를 생성하고 관리자에게 경보를 전파함을 검증했습니다.
+        
+        2. 위협 데이터 시각화 및 시스템 접근 감사: Wazuh 대시보드를 통해 보안 이벤트를 위협 등급(Level)별로 시각화하여 관제 효율을 높였습니다. 또한, 리눅스 시스템 고유의 로그인 감사 로그(btmp, wtmp)를 주기적으로 모니터링하여 무차별 대입(Brute Force) 공격 시도와 비인가 접속 이력을 식별했습니다.
+        
+        `,
       },
       {
-        title: "Access Control & Continuous Monitoring",
+        title: "IV. 공격 시나리오 및 방어 검증",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Real-time access monitoring dashboard"
+            url: projectImage18,
+            caption: "모의해킹을 통한 Root 권한(Flag) 획득"
           },
           {
-            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "User privilege analytics and anomaly detection"
-          }
+            url: projectImage19,
+            caption: "공격 대상(SUID) 취약점 식별"
+          },
+          {
+            url: projectImage20,
+            caption: "Buffer Overflow(BoF) 공격 코드 실행"
+          },
+          {
+            url: projectImage21,
+            caption: "Cisco ASA 방화벽 기반 공격 IP 차단 대응"
+          },
+
         ],
-        description: "Real-time monitoring of user privileges and authentication events. Implemented adaptive access controls with contextual risk assessment and automated threat response mechanisms for proactive security management."
+        description: ` 1. 권한 탈취 및 공격 성공: 타겟 시스템의 취약점을 공략하여 일반 사용자 권한에서 최고 관리자(Root)로 권한을 상승시키고, 최종적으로 Root Flag를 획득하여 시스템 제어권을 확보했습니다.
+
+        2. SUID 취약점 식별 및 BoF 공격 수행: 공격 대상 파일에 설정된 SUID 취약점을 식별했습니다. 이후 파이썬을 이용해 대량의 데이터를 주입하는 오버플로우 페이로드를 실행하여, 시스템이 비정상 종료되는 것을 확인하고 메모리 침범 가능성을 입증했습니다.
+        
+        3. 네트워크 접근 제어 및 공격 차단: 공격 탐지 후 방어자 입장에서 Cisco ASA 방화벽에 접속했습니다. 공격자 IP를 식별하고 차단 정책(ACL)을 즉시 적용하여, 추가적인 피해 확산을 막는 대응 절차를 수행했습니다.
+        `,
       }
     ],
     details: `1. 인프라 설계 및 가시성 확보: Cisco ASA와 pfSense를 기반으로 Web/DB 서비스가 구동되는 3계층 망분리 아키텍처를 구축했으며, Zabbix와 LogAnalyzer를 연동하여 전체 인프라의 자산 상태 및 로그에 대한 실시간 모니터링 환경을 확보했습니다.
@@ -198,12 +228,11 @@ const projects = [
     
     3. 최종 운영 검증: 침해 사고 발생 시 시스템이 위협 로그를 생성하고, 즉각적인 대응 트리거를 발생시킴을 확인했습니다. 공격 시도부터 탐지, 분석, 대응으로 이어지는 관제 프로세스를 확립했습니다.
     `,
-    technologies: ["AWS IAM", "Azure AD", "GCP IAM", "Terraform", "Kubernetes", "Istio", "Vault"],
+    technologies: ["GNS3", "Cisco ASA", "Zabbix", "Wazuh", "Snort", "PfSense", "MariaDB", "Kali Linux"],
     results: [
-      "Reduced attack surface by 70% through micro-segmentation",
-      "Implemented MFA for 100% of privileged accounts",
-      "Decreased lateral movement risk by 85%",
-      "Automated access reviews saving 200 hours/month"
+      "3계층 망분리 및 Active/Standby 고가용성 구성을 통해 무중단 운영 환경 확보",
+      "Zabbix와 Wazuh를 연동한 통합 관제 구축으로 위협 식별 시간 최소화",
+      "실제 공격 수행 및 무결성 변조 탐지를 통해 자동 차단 프로세스 감증"
     ]
   },
   {
