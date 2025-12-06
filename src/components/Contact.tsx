@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react"; // Linkedin, Github 제거됨
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -47,10 +47,7 @@ export function Contact() {
     });
   };
 
-  const handleSocialClick = (platform: string) => {
-    toast.info(`Opening ${platform}...`);
-    // 실제로는 해당 소셜 미디어 링크로 이동
-  };
+  // handleSocialClick 함수 제거됨 (더 이상 버튼이 없으므로 불필요)
 
   return (
     <section id="contact" className="px-6 md:px-20 py-24" style={{ backgroundColor: 'var(--card)' }}>
@@ -112,22 +109,8 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="flex gap-3 pt-4">
-                <button 
-                  onClick={() => handleSocialClick('LinkedIn')}
-                  className="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:scale-105"
-                  style={{ backgroundColor: 'var(--background)' }}
-                >
-                  <Linkedin className="w-5 h-5" style={{ color: 'var(--primary)' }} />
-                </button>
-                <button 
-                  onClick={() => handleSocialClick('GitHub')}
-                  className="w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:scale-105"
-                  style={{ backgroundColor: 'var(--background)' }}
-                >
-                  <Github className="w-5 h-5" style={{ color: 'var(--primary)' }} />
-                </button>
-              </div>
+              {/* 여기에 있던 소셜 아이콘 버튼 <div> 전체가 삭제되었습니다 */}
+
             </div>
           </div>
 
