@@ -2,34 +2,34 @@ import { Shield, Lock, Code, Database, Cloud, Terminal } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Penetration Testing",
+    title: "네트워크 접근 제어 및 VPN",
     icon: Shield,
-    skills: ["Network Scanning", "Vulnerability Assessment", "Exploit Development", "Social Engineering"]
+    skills: ["방화벽 정책 관리", "ACL 보안 설정", "보안 터널링 구축", "라우팅 보안"]
   },
   {
-    title: "Security Architecture",
+    title: "침해 탐지 엔지니어링",
     icon: Lock,
-    skills: ["Zero Trust Design", "Secure SDLC", "Threat Modeling", "Risk Management"]
+    skills: ["IDS/IPS 룰 작성", "정밀 공격 탐지", "호스트 보안 관제"]
   },
   {
-    title: "Application Security",
+    title: "시스템 강화 및 보안 감사",
     icon: Code,
-    skills: ["SAST/DAST", "Code Review", "OWASP Top 10", "Secure Coding"]
+    skills: ["리눅스 권한 관리", "계정 보안 정책", "로그 감사", "서비스 보안 강화"]
   },
   {
-    title: "Cloud Security",
+    title: "모의해킹 및 악성코드 분석",
     icon: Cloud,
-    skills: ["AWS Security", "Azure Security", "Container Security", "IAM"]
+    skills: ["악성코드 분석", "익스플로잇 연구", "워게임 개발 및 운영", "모의 침투 테스트"]
   },
   {
-    title: "Security Tools",
+    title: "웹 애플리케이션 보호",
     icon: Terminal,
-    skills: ["Burp Suite", "Metasploit", "Nmap", "Wireshark"]
+    skills: ["웹 방화벽 구축", "트래픽 로그 분석", "웹 취약점 진단", "보안 아키텍처"]
   },
   {
-    title: "Data Protection",
+    title: "인프라 보안 모니터링",
     icon: Database,
-    skills: ["Encryption", "PKI", "DLP", "Backup Security"]
+    skills: ["통합 관제 시스템", "DB 모니터링", "에이전트 관리"]
   }
 ];
 
