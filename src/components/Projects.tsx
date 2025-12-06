@@ -237,11 +237,11 @@ const projects = [
     ]
   },
   {
-    title: "Secure Code Review Pipeline",
+    title: "침해사고 분석 및 대응 역량 강화를 위한 통합 보안 실습 환경 구축",
     description: "Developed automated security scanning pipeline integrating SAST and DAST tools into CI/CD workflow.",
     icon: Code,
     tags: ["DevSecOps", "Automation", "SAST/DAST"],
-    image: "https://images.unsplash.com/photo-1761519609249-c0ca325f81db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxwZW5ldHJhdGlvbiUyMHRlc3RpbmclMjBjb2RlfGVufDF8fHx8MTc2Mzg3ODA4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: projectImage22,
     sections: [
       {
         title: "DevSecOps Pipeline Architecture",
