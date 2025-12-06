@@ -1,5 +1,5 @@
-import { Shield, Mail } from "lucide-react"; // Mail 아이콘 다시 추가, Shield 유지
-import { toast } from "sonner@2.0.3"; // 클릭 알림을 위해 toast 복구
+import { Shield, Mail } from "lucide-react";
+import { toast } from "sonner@2.0.3";
 
 export function Footer() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -10,7 +10,6 @@ export function Footer() {
     }
   };
 
-  // Mail 버튼을 위해 클릭 함수 복구
   const handleSocialClick = (platform: string) => {
     toast.info(`Opening ${platform}...`);
   };
@@ -24,9 +23,12 @@ export function Footer() {
       }}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-8 mb-8">
-          {/* 1. 브랜드 로고 영역 */}
-          <div className="lg:col-span-4">
+        
+        {/* ▼▼▼ Grid 대신 Flex를 사용하여 강제 가로 배치 ▼▼▼ */}
+        <div className="flex flex-col md:flex-row justify-between gap-10 mb-8">
+          
+          {/* [1구역] 브랜드 로고 (왼쪽 고정) */}
+          <div className="flex-1"> 
             <div className="flex items-center gap-2 mb-4">
               <div 
                 className="w-10 h-10 rounded-lg flex items-center justify-center"
@@ -43,52 +45,52 @@ export function Footer() {
             </p>
           </div>
 
-          {/* 2. Quick Links 영역 */}
-          <div className="lg:col-span-2">
-            <h4 
-              className="mb-4"
-              style={{ fontWeight: '600', color: 'var(--foreground)' }}
-            >
-              Quick Links
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <a 
-                  href="#about"
-                  onClick={(e) => scrollToSection(e, 'about')}
-                  className="transition-colors hover:opacity-80 cursor-pointer"
-                  style={{ color: 'var(--muted-foreground)' }}
+          {/* [2구역] Quick Links (가운데 쯤 위치) */}
+          <div className="flex-1 md:text-center"> {/* PC에서는 가운데 정렬 텍스트 */}
+            <div className="inline-block text-left"> {/* 내용은 왼쪽 정렬 유지하며 박스만 가운데로 */}
+                <h4 
+                className="mb-4"
+                style={{ fontWeight: '600', color: 'var(--foreground)' }}
                 >
-                  About
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#projects"
-                  onClick={(e) => scrollToSection(e, 'projects')}
-                  className="transition-colors hover:opacity-80 cursor-pointer"
-                  style={{ color: 'var(--muted-foreground)' }}
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#skills"
-                  onClick={(e) => scrollToSection(e, 'skills')}
-                  className="transition-colors hover:opacity-80 cursor-pointer"
-                  style={{ color: 'var(--muted-foreground)' }}
-                >
-                  Skills
-                </a>
-              </li>
-            </ul>
+                Quick Links
+                </h4>
+                <ul className="space-y-2">
+                <li>
+                    <a 
+                    href="#about"
+                    onClick={(e) => scrollToSection(e, 'about')}
+                    className="transition-colors hover:opacity-80 cursor-pointer"
+                    style={{ color: 'var(--muted-foreground)' }}
+                    >
+                    About
+                    </a>
+                </li>
+                <li>
+                    <a 
+                    href="#projects"
+                    onClick={(e) => scrollToSection(e, 'projects')}
+                    className="transition-colors hover:opacity-80 cursor-pointer"
+                    style={{ color: 'var(--muted-foreground)' }}
+                    >
+                    Projects
+                    </a>
+                </li>
+                <li>
+                    <a 
+                    href="#skills"
+                    onClick={(e) => scrollToSection(e, 'skills')}
+                    className="transition-colors hover:opacity-80 cursor-pointer"
+                    style={{ color: 'var(--muted-foreground)' }}
+                    >
+                    Skills
+                    </a>
+                </li>
+                </ul>
+            </div>
           </div>
 
-          {/* 3. Services 영역 삭제됨 (빈 공간으로 남거나 레이아웃이 당겨짐) */}
-
-          {/* 4. Connect 영역 */}
-          <div className="lg:col-span-4">
+          {/* [3구역] Connect (오른쪽 고정 혹은 왼쪽 정렬) */}
+          <div className="flex-1">
             <h4 
               className="mb-4"
               style={{ fontWeight: '600', color: 'var(--foreground)' }}
@@ -96,7 +98,6 @@ export function Footer() {
               Connect
             </h4>
             
-            {/* 아이콘 버튼 영역: Mail만 남김 */}
             <div className="flex gap-3 mb-4">
               <button 
                 onClick={() => handleSocialClick('Email')}
@@ -105,9 +106,6 @@ export function Footer() {
               >
                 <Mail className="w-5 h-5" style={{ color: 'var(--primary)' }} />
               </button>
-              
-              {/* LinkedIn, GitHub 버튼은 삭제됨 */}
-            
             </div>
 
             <p style={{ color: 'var(--muted-foreground)', fontSize: '0.875rem' }}>
@@ -115,8 +113,8 @@ export function Footer() {
             </p>
           </div>
         </div>
+        {/* ▲▲▲ 수정 끝 ▲▲▲ */}
 
-        {/* 하단 저작권 영역 */}
         <div 
           className="pt-8"
           style={{ borderTop: '1px solid var(--border)' }}
