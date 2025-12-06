@@ -237,8 +237,8 @@ const projects = [
     ]
   },
   {
-    title: "침해사고 분석 및 대응 역량 강화를 위한 통합 보안 실습 환경 구축",
-    description: "Developed automated security scanning pipeline integrating SAST and DAST tools into CI/CD workflow.",
+    title: "가상 기업망 기반의 심층 방어 아키텍처 구현 및 침해사고 대응 프로젝트",
+    description: "",
     icon: Code,
     tags: ["DevSecOps", "Automation", "SAST/DAST"],
     image: projectImage22,
@@ -329,7 +329,7 @@ export function Projects() {
               Featured Projects
             </h2>
             <p style={{ color: 'var(--muted-foreground)', fontSize: '1.125rem' }}>
-              Recent security engineering projects and implementations
+              Security projects and technical studies
             </p>
           </div>
 
