@@ -66,14 +66,15 @@ export function Contact() {
                 color: 'var(--foreground)'
               }}
             >
-              Get In Touch
+              Contact
             </h2>
             <p 
               className="mb-8"
               style={{ color: 'var(--muted-foreground)', fontSize: '1.125rem', lineHeight: '1.6' }}
             >
-              Looking for a security engineer to help protect your systems? 
-              Let's discuss how I can help secure your infrastructure.
+              포트폴리오를 끝까지 확인해 주셔서 감사합니다. 
+              현재 정보보호 분야의 신입 포지션을 찾고 있습니다. 
+              면접 제안이나 궁금하신 점은 언제든 편하게 연락 주세요.
             </p>
 
             <div className="space-y-4">
@@ -89,7 +90,7 @@ export function Contact() {
                     Email
                   </p>
                   <p style={{ fontWeight: '500', color: 'var(--foreground)' }}>
-                    security@example.com
+                    kim1rain@icloud.com
                   </p>
                 </div>
               </div>
@@ -106,7 +107,7 @@ export function Contact() {
                     Location
                   </p>
                   <p style={{ fontWeight: '500', color: 'var(--foreground)' }}>
-                    San Francisco, CA
+                    Daegu, South Korea
                   </p>
                 </div>
               </div>
