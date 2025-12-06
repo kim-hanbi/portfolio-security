@@ -23,6 +23,7 @@ import projectImage18 from '/images/project2/1.PNG';
 import projectImage19 from '/images/project2/26.PNG';
 import projectImage20 from '/images/project2/27.PNG';
 import projectImage21 from '/images/project2/5.PNG';
+import projectImage22 from '/images/project3/0.PNG';
 const projects = [
   {
     // ------------------------------------------
