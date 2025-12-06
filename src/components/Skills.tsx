@@ -50,7 +50,7 @@ export function Skills() {
             Skills & Expertise
           </h2>
           <p style={{ color: 'var(--muted-foreground)', fontSize: '1.125rem' }}>
-            Comprehensive security skill set across multiple domains
+            Technical skills and security tools
           </p>
         </div>
 

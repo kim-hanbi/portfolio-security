@@ -33,10 +33,10 @@ export function Experience() {
               color: 'var(--foreground)'
             }}
           >
-            Experience
+            Activities & Achievements
           </h2>
           <p style={{ color: 'var(--muted-foreground)', fontSize: '1.125rem' }}>
-            Professional journey in security engineering
+            Participation in security competitions
           </p>
         </div>
 
