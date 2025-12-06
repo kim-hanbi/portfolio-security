@@ -9,7 +9,12 @@ import projectImage4 from '/images/project1/4.png';
 import projectImage5 from '/images/project1/5.png';
 import projectImage6 from '/images/project1/6.png';
 import projectImage7 from '/images/project1/7.png';
-import projectImage8 from '/images/project2/0.PNG'; 
+import projectImage8 from '/images/project2/0.PNG';
+import projectImage9 from '/images/project2/3.PNG';
+import projectImage10 from '/images/project2/8.PNG';
+import projectImage11 from '/images/project2/13.PNG';
+import projectImage12 from '/images/project2/6.PNG';
+import projectImage13 from '/images/project2/12.PNG';
 const projects = [
   {
     // ------------------------------------------
@@ -114,43 +119,46 @@ const projects = [
     image: projectImage8,
     sections: [
       {
-        title: "Zero Trust Architecture Design",
+        title: "I. 보안 인프라 아키텍처 및 서비스 망 설계",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-            caption: "Zero trust architecture diagram with micro-segmentation layers"
+            url: projectImage9,
+            caption: "Web 서버 정상 접속 확인"
           },
           {
-            url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Identity and access management flow chart"
+            url: projectImage10,
+            caption: "서비스 DB 스키마(Schema) 설계"
           },
           {
-            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Security policy enforcement points across network segments"
+            url: projectImage11,
+            caption: "실시간 성능 모니터링"
           }
         ],
-        description: "Multi-cloud security framework with micro-segmentation layers spanning AWS, Azure, and GCP. Implemented identity-based access controls with continuous verification and least-privilege principles to ensure comprehensive security coverage."
+        description: `1. 3계층 서비스 망 분리 및 접근성 검증: 구축된 3계층 네트워크 위에서 라우팅 및 방화벽 정책이 정상 동작함을 입증하기 위해, Web 서버 접속 테스트를 수행했습니다. 망 분리 환경에서도 서비스 접속이 정상적으로 이루어짐을 검증했습니다.
+
+2. 데이터베이스 스키마 설계 및 서비스 연동: 단순 네트워크 연결을 넘어, 실제 애플리케이션 데이터를 처리하는 MariaDB를 구축하고 스키마(Skillcodes Table)를 직접 설계했습니다. 이를 통해 서비스 계층(Layer 7)의 구조를 확립하고, 실시간 DB 성능 관제를 통해 웹과 DB 간의 안정적인 연동 상태를 확인했습니다.
+        
+        `,
       },
-      //테스트용
+
          {
-        title: "Zero Trust Architecture Design2",
+        title: "중앙 집중형 모니터링 및 가시성 확보",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxzZWN1cml0eSUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdHxlbnwxfHx8fDE3NjM4NzgwODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-            caption: "Zero trust architecture diagram with micro-segmentation layers"
+            url: projectImage12,
+            caption: "Zabbix 인프라 통합 관제 대시보드"
           },
           {
-            url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Identity and access management flow chart"
+            url: projectImage13,
+            caption: "Syslog 기반 로그 통합 수집 및 분석"
           },
-          {
-            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Security policy enforcement points across network segments"
-          }
         ],
-        description: "Multi-cloud security framework with micro-segmentation layers spanning AWS, Azure, and GCP. Implemented identity-based access controls with continuous verification and least-privilege principles to ensure comprehensive security coverage."
+        description: `1. 인프라 통합 관제 대시보드 구축: 분산된 인프라 환경의 효율적인 관제를 위해 통합 모니터링 도구인 Zabbix를 도입했습니다. 서버 및 네트워크 장비의 리소스 현황과 가용성 상태를 실시간 대시보드로 시각화하여, 장애 발생 시 즉각적으로 인지하고 대응할 수 있는 신속한 장애 대응 체계를 확립했습니다.
+
+        2. Syslog 기반 로그 통합 분석 체계: 개별 서버에 접속하여 로그를 확인하는 비효율을 개선하기 위해, rsyslog 프로토콜을 활용해 모든 시스템 로그를 중앙 서버로 수집했습니다. 수집된 로그는 LogAnalyzer 웹 인터페이스를 통해 통합 검색 및 분석이 가능하도록 하여, 침해 사고 분석 시 로그 추적 시간을 획기적으로 단축했습니다.
+
+        `,
       },
-      //테스트용
       {
         title: "Multi-Cloud Integration & IAM",
         images: [
