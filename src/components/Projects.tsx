@@ -184,7 +184,12 @@ const projects = [
         description: "Real-time monitoring of user privileges and authentication events. Implemented adaptive access controls with contextual risk assessment and automated threat response mechanisms for proactive security management."
       }
     ],
-    details: "Architected and deployed a comprehensive zero trust security framework for a multi-cloud environment spanning AWS, Azure, and GCP. Implemented micro-segmentation, continuous verification, and least-privilege access controls across 500+ cloud resources.",
+    details: `1. 인프라 설계 및 가시성 확보: Cisco ASA와 pfSense를 기반으로 Web/DB 서비스가 구동되는 3계층 망분리 아키텍처를 구축했으며, Zabbix와 LogAnalyzer를 연동하여 전체 인프라의 자산 상태 및 로그에 대한 실시간 모니터링 환경을 확보했습니다.
+    
+    2. 탐지 논리 및 시나리오 검증: 실제 Root 권한 탈취 및 파일 변조 시나리오를 수행하며, 이에 대응하는 Wazuh(HIDS) 무결성 검증 규칙과 Snort 탐지 정책을 직접 설계하고 적용했습니다.
+    
+    3. 최종 운영 검증: 침해 사고 발생 시 시스템이 위협 로그를 생성하고, 즉각적인 대응 트리거를 발생시킴을 확인했습니다. 공격 시도부터 탐지, 분석, 대응으로 이어지는 관제 프로세스를 확립했습니다.
+    `,
     technologies: ["AWS IAM", "Azure AD", "GCP IAM", "Terraform", "Kubernetes", "Istio", "Vault"],
     results: [
       "Reduced attack surface by 70% through micro-segmentation",
