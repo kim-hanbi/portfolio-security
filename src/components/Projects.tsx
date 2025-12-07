@@ -298,7 +298,12 @@ const projects = [
         description: "Tracking vulnerability trends and remediation progress over time. Created executive dashboards providing visibility into security posture and improvement metrics with automated ticket creation and severity-based SLA management."
       }
     ],
-    details: "Built an enterprise-grade DevSecOps pipeline that automatically scans code for security vulnerabilities at every stage of development. Integrated multiple security testing tools and created custom rules to catch organization-specific security issues.",
+    details: ` 1. Active/Standby 이중 연결을 통한 3계층 망분리 아키텍처를 구축하여 최대 가용성 확보와 분석에 필요한 로그 신뢰성을 유지했습니다.
+
+2. 통합 관제 환경에서 Snort와 Wazuh를 활용한 탐지 논리를 설계하고, Flare-VM 악성코드 분석 역량을 통합하여 선제적 방어 규칙 적용 기반을 마련했습니다.
+
+3. 실전 워게임 검증과 자동 차단 연동을 통해 자동화된 대응 체계를 확립하고, 실무형 침해사고 분석 및 대응 역량을 입증했습니다.
+    `,
     technologies: ["GitLab CI/CD", "SonarQube", "OWASP ZAP", "Checkmarx", "Snyk", "Docker", "Jenkins"],
     results: [
       "Detected security issues 95% earlier in development cycle",
