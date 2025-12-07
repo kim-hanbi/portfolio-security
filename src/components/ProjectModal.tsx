@@ -13,6 +13,7 @@ interface ProjectSection {
   description: string;
 }
 
+// 💡 ProjectModalProps 인터페이스에 'technicalNote' 속성 추가
 interface ProjectModalProps {
   project: {
     title: string;
@@ -22,6 +23,8 @@ interface ProjectModalProps {
     image: string;
     sections?: ProjectSection[];
     details?: string;
+    // 새롭게 추가된 속성
+    technicalNote?: string; 
     technologies?: string[];
     results?: string[];
   };
@@ -172,15 +175,15 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
         <div className="p-6">
           {project.image && (
-  <div className="mb-6">
-    <img
-      src={project.image}
-      alt={`${project.title} 대표 이미지`}
-      className="w-full object-contain rounded-[12px] shadow-card"
-      style={{ maxHeight: "400px", width: "100%"}}
-    />
-  </div>
-)}
+            <div className="mb-6">
+              <img
+                src={project.image}
+                alt={`${project.title} 대표 이미지`}
+                className="w-full object-contain rounded-[12px] shadow-card"
+                style={{ maxHeight: "400px", width: "100%" }}
+              />
+            </div>
+          )}
           {/* Overview */}
           <div className="mb-6">
             <h3
@@ -194,7 +197,29 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             </p>
           </div>
 
-          {/* Project Details — 수정된 부분 */}
+          {/* Technical Documentation Note - 💡 project.technicalNote를 사용하도록 수정 */}
+          {project.technicalNote && (
+            <div className="mb-6">
+              <h3
+                className="mb-3"
+                style={{ fontWeight: "600", color: "var(--foreground)", fontSize: "1.25rem" }}
+              >
+                Technical Documentation Note
+              </h3>
+
+              <p
+                style={{
+                  color: "var(--muted-foreground)",
+                  lineHeight: "1.6",
+                  whiteSpace: "pre-line",
+                }}
+              >
+                {project.technicalNote}
+              </p>
+            </div>
+          )}
+
+          {/* Project Details - project.details 유지 */}
           {project.details && (
             <div className="mb-6">
               <h3
@@ -204,7 +229,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 Project Details
               </h3>
 
-              {/* 🔥 줄바꿈을 그대로 표시하는 안전한 방식 */}
               <p
                 style={{
                   color: "var(--muted-foreground)",
@@ -325,8 +349,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               ))}
             </div>
           </div>
-          
-            
 
           {/* Close Button */}
           <Button
