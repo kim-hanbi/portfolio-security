@@ -1,7 +1,9 @@
-import { Shield, Mail } from "lucide-react";
+import { Shield, Mail } from "lucide-react"; 
 import { toast } from "sonner@2.0.3";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -24,10 +26,10 @@ export function Footer() {
     >
       <div className="max-w-7xl mx-auto">
         
-        {/* ▼▼▼ Grid 대신 Flex를 사용하여 강제 가로 배치 ▼▼▼ */}
+        {/* ▼▼▼ 상단 푸터 섹션 (김한비, Quick Links, Connect) ▼▼▼ */}
         <div className="flex flex-col md:flex-row justify-between gap-10 mb-8">
           
-          {/* [1구역] 브랜드 로고 (왼쪽 고정) */}
+          {/* [1구역] 브랜드 로고 */}
           <div className="flex-1"> 
             <div className="flex items-center gap-2 mb-4">
               <div 
@@ -45,9 +47,9 @@ export function Footer() {
             </p>
           </div>
 
-          {/* [2구역] Quick Links (가운데 쯤 위치) */}
-          <div className="flex-1 md:text-center"> {/* PC에서는 가운데 정렬 텍스트 */}
-            <div className="inline-block text-left"> {/* 내용은 왼쪽 정렬 유지하며 박스만 가운데로 */}
+          {/* [2구역] Quick Links */}
+          <div className="flex-1 md:text-center">
+            <div className="inline-block text-left">
                 <h4 
                 className="mb-4"
                 style={{ fontWeight: '600', color: 'var(--foreground)' }}
@@ -89,7 +91,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* [3구역] Connect (오른쪽 고정 혹은 왼쪽 정렬) */}
+          {/* [3구역] Connect */}
           <div className="flex-1">
             <h4 
               className="mb-4"
@@ -113,34 +115,25 @@ export function Footer() {
             </p>
           </div>
         </div>
-        {/* ▲▲▲ 수정 끝 ▲▲▲ */}
+        {/* ▲▲▲ 상단 푸터 섹션 끝 ▲▲▲ */}
 
+        {/* ▼▼▼ 하단 저작권 섹션 (링크 삭제 완료) ▼▼▼ */}
         <div 
           className="pt-8"
           style={{ borderTop: '1px solid var(--border)' }}
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            {/* [1] 저작권 및 개발자 명시 (연도 자동 갱신 적용) */}
             <p style={{ color: 'var(--muted-foreground)', fontSize: '0.875rem' }}>
-              © 2024 SecurePort. All rights reserved.
+              © {currentYear} Secure Project. Designed & Developed by 김한비.
             </p>
-            <div className="flex gap-6">
-              <a 
-                href="#privacy"
-                className="transition-colors hover:opacity-80"
-                style={{ color: 'var(--muted-foreground)', fontSize: '0.875rem' }}
-              >
-                Privacy Policy
-              </a>
-              <a 
-                href="#terms"
-                className="transition-colors hover:opacity-80"
-                style={{ color: 'var(--muted-foreground)', fontSize: '0.875rem' }}
-              >
-                Terms of Service
-              </a>
-            </div>
+            
+            {/* [2] 핵심 링크가 삭제되어 이 영역은 비어 있습니다. */}
+            
           </div>
         </div>
+        {/* ▲▲▲ 수정 끝 ▲▲▲ */}
       </div>
     </footer>
   );
