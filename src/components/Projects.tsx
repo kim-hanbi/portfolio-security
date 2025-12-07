@@ -27,6 +27,8 @@ import projectImage22 from '/images/project3/0.PNG';
 import projectImage23 from '/images/project3/1.PNG';
 import projectImage24 from '/images/project3/2.PNG';
 import projectImage25 from '/images/project3/3.PNG';
+import projectImage26 from '/images/project3/4.PNG';
+import projectImage27 from '/images/project3/5.PNG';
 const projects = [
   {
     // ------------------------------------------
@@ -263,7 +265,7 @@ const projects = [
           },
           {
             url: projectImage24,
-            caption: "ApfSense 게이트웨이 및 보안 설정"
+            caption: "pfSense 게이트웨이 및 보안 설정"
           },
           {
             url: projectImage25,
@@ -279,7 +281,7 @@ const projects = [
         `,
       },
       {
-        title: "SAST & DAST Integration",
+        title: "II. 통합 관제 환경 및 위협 가시성 확보",
         images: [
           {
             url: "https://images.unsplash.com/photo-1542903660-eedba2cda473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
@@ -294,7 +296,9 @@ const projects = [
             caption: "Custom security rule engine configuration"
           }
         ],
-        description: "SAST and DAST tools showing vulnerability detection in real-time. Implemented custom security rules tailored to organization's technology stack and security requirements with automated remediation suggestions."
+        description: ` 
+        
+        `,
       },
       {
         title: "Security Metrics & Reporting",
