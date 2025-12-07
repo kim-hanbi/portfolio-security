@@ -238,7 +238,7 @@ const projects = [
   },
   {
     title: "가상 기업망 기반의 심층 방어 아키텍처 구현 및 침해사고 대응 프로젝트",
-    description: "",
+    description: "Active/Standby 이중화 아키텍처로 무중단 연속성을 확보하고, Flare-VM 분석 역량을 통합 보안 관제 환경에 연동하여 침해 징후 기반의 선제적 방어 및 자동화된 대응 체계를 구축",
     icon: Code,
     tags: ["DevSecOps", "Automation", "SAST/DAST"],
     image: projectImage22,
