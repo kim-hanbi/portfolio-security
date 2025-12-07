@@ -24,7 +24,9 @@ import projectImage19 from '/images/project2/26.PNG';
 import projectImage20 from '/images/project2/27.PNG';
 import projectImage21 from '/images/project2/5.PNG';
 import projectImage22 from '/images/project3/0.PNG';
-
+import projectImage23 from '/images/project3/1.PNG';
+import projectImage24 from '/images/project3/2.PNG';
+import projectImage25 from '/images/project3/3.PNG';
 const projects = [
   {
     // ------------------------------------------
@@ -253,22 +255,28 @@ const projects = [
     image: projectImage22,
     sections: [
       {
-        title: "DevSecOps Pipeline Architecture",
+        title: "I. 보안 인프라 아키텍처 및 고가용성 설계",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1761519609249-c0ca325f81db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxwZW5ldHJhdGlvbiUyMHRlc3RpbmclMjBjb2RlfGVufDF8fHx8MTc2Mzg3ODA4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-            caption: "CI/CD pipeline with integrated security testing stages"
+            url: projectImage23,
+            caption: "Active/Standby 이중화(HA) 상태 점검"
           },
           {
-            url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Automated security gate workflow diagram"
+            url: projectImage24,
+            caption: "ApfSense 게이트웨이 및 보안 설정"
           },
           {
-            url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Build and deployment pipeline with security checkpoints"
+            url: projectImage25,
+            caption: "내부망 DNS 서버 구축 및 질의 검증"
           }
         ],
-        description: "Automated security testing integrated into CI/CD workflow. Built comprehensive pipeline combining static analysis, dynamic testing, and dependency scanning at every commit to catch vulnerabilities early in the development lifecycle."
+        description: ` 1. Active/Standby 고가용성(HA) 구현 및 검증: 라우팅 경로의 단일 실패 지점(SPoF)을 제거하기 위해 HSRP 기반의 이중화 구성을 적용했습니다. 실제 장비 장애 시나리오에서 Active 라우터가 Standby 상태로 즉시 전환되고, Virtual IP를 통해 통신이 끊김 없이 유지됨을 CLI 상태 정보와 Ping 테스트로 입증했습니다.
+        
+        2. 보안 게이트웨이(pfSense) 접근 제어 강화: 외부와 내부를 잇는 게이트웨이인 pfSense의 관리 보안을 위해 SSH 접속을 활성화하고 접근 제어 정책을 수립했습니다. 이를 통해 향후 자동화 스크립트가 안전하게 방화벽 정책을 제어할 수 있는 기반 환경을 마련했습니다.
+        
+        3. 독립적인 내부망 DNS 인프라 구축: 폐쇄된 망분리 환경에서도 원활한 도메인 이름 해석이 가능하도록 Rocky Linux 기반의 자체 DNS 서버(Bind9)를 구축했습니다. nslookup 질의 테스트를 통해 내부 서버들이 도메인 기반으로 정상 통신함을 확인하고, 서비스 아키텍처의 완성도를 높였습니다.
+
+        `,
       },
       {
         title: "SAST & DAST Integration",
