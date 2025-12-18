@@ -29,6 +29,8 @@ import projectImage24 from '/images/project3/2.PNG';
 import projectImage25 from '/images/project3/3.PNG';
 import projectImage26 from '/images/project3/4.PNG';
 import projectImage27 from '/images/project3/5.PNG';
+import projectImage28 from '/images/project3/6.PNG';
+
 const projects = [
   {
     // ------------------------------------------
@@ -284,8 +286,8 @@ const projects = [
         title: "II. 통합 관제 환경 및 위협 가시성 확보",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1542903660-eedba2cda473?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Real-time SAST code analysis dashboard"
+            url: projectImage26,
+            caption: "Zabbix 인프라 통합 관제 대시보드"
           },
           {
             url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
@@ -296,7 +298,7 @@ const projects = [
             caption: "Custom security rule engine configuration"
           }
         ],
-        description: ` 
+        description: ` 1. Zabbix를 활용하여 분산된 3계층 네트워크 대시
         
         `,
       },
