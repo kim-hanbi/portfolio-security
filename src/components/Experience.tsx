@@ -12,7 +12,7 @@ const experiences = [
     description: "참가자가 타겟 머신에 직접 침투하여 Root 권한을 획득해야 하는 시스템 CTF(System Hacking) 머신을 직접 제작했습니다. Sticky Bit/SetUID 설정 및 Buffer Overflow(BoF) 취약점이 포함된 리눅스 기반의 취약한 가상머신(Vulnerable VM)을 설계하여, 실제 침투 시나리오를 검증하고 대회를 운영했습니다."
   },
   {
-    year: "2025.11.1",
+    year: "2025.11.19",
     role: "Wargame 대회 총괄 및 문제 출제",
     company: "자체 운영 대회",
     description: "팀별 Wargame 대회를 직접 기획하고 개최했습니다. Web, System 등 총 20개의 해킹 방어 문제를 직접 제작하여 출제했으며, 대회 당일 스코어보드 관리 및 참가자 대응 등 전반적인 대회 운영을 총괄했습니다."
