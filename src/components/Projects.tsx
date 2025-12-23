@@ -33,6 +33,9 @@ import projectImage28 from '/images/project3/6.PNG';
 import projectImage29 from '/images/project3/7.PNG';
 import projectImage30 from '/images/project3/8.PNG';
 import projectImage31 from '/images/project3/9.PNG';
+import projectImage32 from '/images/project3/10.PNG';
+import projectImage33 from '/images/project3/11.PNG';
+import projectImage34 from '/images/project3/12.PNG';
 const projects = [
   {
     // ------------------------------------------
@@ -333,22 +336,28 @@ const projects = [
         `
       },
       {
-        title: "Security Metrics & Reporting",
+        title: "IV. 웹 취약점 분석 및 자체 워게임 개발 프로젝트",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Vulnerability trends and remediation metrics"
+            url: projectImage32,
+            caption: "SQL Injection(SQL 삽입) 기법을 악용한 관리자 인증 우회 및 권한 탈취"
           },
           {
-            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            url: projectImage33,
             caption: "Executive security posture dashboard"
           },
           {
-            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            url: projectImage34,
             caption: "Automated vulnerability ticket management system"
           }
         ],
-        description: "Tracking vulnerability trends and remediation progress over time. Created executive dashboards providing visibility into security posture and improvement metrics with automated ticket creation and severity-based SLA management."
+        description: ` 1. 웹 애플리케이션의 인증 로직 내 입력값 검증 부재를 식별했습니다. 로그인 파라미터에 ' OR 1=1-- 구문을 주입하여 데이터베이스의 쿼리 로직을 참(True)으로 조작했습니다. 이를 통해 패스워드 검증 절차를 강제로 무력화하고 최고 관리자(Administrator) 권한을 획득함으로써, 인증 체계의 치명적인 보안 취약점을 입증했습니다.
+        
+        2. 공격 기법 연구 및 로그 수집을 위해 Docker와 PHP 기반의 자체 워게임 플랫폼을 개발했습니다. 단순한 웹 페이지 구현을 넘어, JavaScript 난독화(Obfuscation) 및 디코딩 로직을 직접 설계하여 Level 1~7의 단계별 취약점 시나리오를 완성했습니다. 위 사진(하단)은 Level 5 문제의 난독화 코드를 분석하는 과정으로, 이를 통해 공격자와 방어자 관점의 코드 이해도를 모두 높였습니다.
+        
+        3. 리눅스 기반 가상 머신(Money Box)을 대상으로 침투 시나리오를 수행했습니다. 육안으로 식별 불가능한 이미지 내 은닉 데이터를 추출하는 스테가노그래피(Steganography) 분석을 통해 초기 접속 정보를 확보했습니다. 이후 시스템 내부 정찰 중 Perl 실행 파일에 대한 Sudo 권한 설정 미흡(Misconfiguration)을 식별하고, 이를 익스플로잇(Exploit)하여 일반 사용자 계정에서 최고 관리자(Root) 권한으로 상승시키는 시스템 장악에 성공했습니다.
+
+        `
       }
       
     ],
@@ -392,7 +401,6 @@ export function Projects() {
               Featured Projects
             </h2>
             <p style={{ color: 'var(--muted-foreground)', fontSize: '1.125rem' }}>
-              Security projects and technical studies
             </p>
           </div>
 
