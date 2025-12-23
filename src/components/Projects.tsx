@@ -290,15 +290,19 @@ const projects = [
             caption: "Zabbix 인프라 통합 관제 대시보드"
           },
           {
-            url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "DAST runtime vulnerability scanning results"
+            url: projectImage27,
+            caption: "Wazuh 호스트 기반 위협 탐지(HIDS) 현황"
           },
           {
-            url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Custom security rule engine configuration"
+            url: projectImage28,
+            caption: "PMM 데이터베이스 성능 심층 모니터링"
           }
         ],
-        description: ` 1. Zabbix를 활용하여 분산된 3계층 네트워크 대시
+        description: ` 1. Zabbix를 활용하여 분산된 3계층 네트워크 환경의 자산 상태를 한눈에 파악할 수 있는 통합 관제 시스템을 구축했습니다.
+        
+        2. 분산된 서버 환경의 보안 에이전트(Agent) 연결 상태를 중앙 대시보드에서 통합 모니터링했습니다. 개별 노드의 가동 현황(Active Status)을 실시간으로 파악하여 보안 관제의 사각지대를 제거하고, 안정적인 로그 수집 채널을 유지했습니다.
+
+        3. MySQL의 핵심 지표(QPS, Connection)와 호스트 시스템의 리소스(CPU, Memory) 사용률을 단일 대시보드에서 통합 모니터링했습니다. 데이터베이스 트래픽 변화가 실제 서버 부하에 미치는 영향을 실시간으로 파악하여, 성능 저하를 유발하는 원인을 신속하게 식별하고 안정적인 서비스 가용성을 확보했습니다.
         
         `,
       },
