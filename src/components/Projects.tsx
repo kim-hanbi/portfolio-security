@@ -30,7 +30,9 @@ import projectImage25 from '/images/project3/3.PNG';
 import projectImage26 from '/images/project3/4.PNG';
 import projectImage27 from '/images/project3/5.PNG';
 import projectImage28 from '/images/project3/6.PNG';
-
+import projectImage29 from '/images/project3/7.PNG';
+import projectImage30 from '/images/project3/8.PNG';
+import projectImage31 from '/images/project3/9.PNG';
 const projects = [
   {
     // ------------------------------------------
@@ -307,22 +309,28 @@ const projects = [
         `,
       },
       {
-        title: "Security Metrics & Reporting",
+        title: "III. 악성코드 심층 분석 및 보안 문제 해결 역량",
         images: [
           {
-            url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Vulnerability trends and remediation metrics"
+            url: projectImage29,
+            caption: "바이너리 정적 분석을 통한 시스템 무력화 로직 식별"
           },
           {
-            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Executive security posture dashboard"
+            url: projectImage30,
+            caption: "공격 지속성(Persistence) 확보를 위한 악성 서비스 등록 및 상태 검증"
           },
           {
-            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-            caption: "Automated vulnerability ticket management system"
+            url: projectImage31,
+            caption: "역공학(Reverse Engineering) 기반 C2 통신 도메인 추출 및 흐름 분석"
           }
         ],
-        description: "Tracking vulnerability trends and remediation progress over time. Created executive dashboards providing visibility into security posture and improvement metrics with automated ticket creation and severity-based SLA management."
+        description: ` 1. 문자열 분석을 통해 Lab01-01.exe 내부에 은닉된 WARNING_THIS_WILL_DESTROY_YOUR_MACHINE 시그니처를 식별했습니다. 이를 통해 해당 파일이 단순 정보 수집을 넘어 시스템 가용성을 저해하고 무력화하려는 공격 의도가 있음을 확인했습니다.
+
+        2. 서비스 관리자(services.msc) 분석을 통해 비정상 서비스인 Malservice가 등록된 것을 확인했습니다. 해당 서비스가 시스템 재부팅 후에도 자동 실행되도록 설정된 점을 통해, 공격자가 시스템 권한을 유지하려는 지속성 공격 의도가 있음을 입증했습니다.
+
+        3. IDA Pro를 이용한 역공학 분석을 통해 프로그램의 실행 흐름을 추적하고 외부 통신 로직을 확인했습니다. 코드 분석 결과, http://www.malwareanalysisbook.com/ad.html 주소로 연결되는 지점을 식별하여 공격자의 명령 제어(C2) 서버 정보를 확보했습니다.
+        
+        `
       },
       {
         title: "Security Metrics & Reporting",
