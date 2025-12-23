@@ -260,7 +260,7 @@ const projects = [
     title: "가상 기업망 기반의 심층 방어 아키텍처 구현 및 침해사고 대응 프로젝트",
     description: "Active/Standby 이중화 아키텍처로 무중단 연속성을 확보하고, Flare-VM 분석 역량을 통합 보안 관제 환경에 연동하여 침해 징후 기반의 선제적 방어 및 자동화된 대응 체계를 구축",
     icon: Code,
-    tags: ["DevSecOps", "Automation", "SAST/DAST"],
+    tags: ["OWASP_Top_10(웹 취약점 표준)", "CTF(해킹 방어 대회/실습)", "Privilege_Escalation(권한 상승)"],
     image: projectImage22,
     sections: [
       {
@@ -371,12 +371,11 @@ const projects = [
     // 💡 Technical Documentation Note (기술적 침해사고 대응 환경 설명)
     technicalNote: ` 본 프로젝트는 다중 물리적 환경에서 VM을 운영했기 때문에, 첨부된 일부 스크린샷의 호스트 IP 대역대에 차이가 발생합니다. 그러나 이는 VM 환경 포터빌리티를 확보한 결과이며, 프로젝트의 핵심 로직은 환경과 관계없이 동일한 논리적 구조와 정책을 기반으로 일관되게 구현되었음을 확인합니다.
     `,
-    technologies: ["GitLab CI/CD", "SonarQube", "OWASP ZAP", "Checkmarx", "Snyk", "Docker", "Jenkins"],
+    technologies: ["IDA Pro", "Burp Suite", "Docker", "PHP", "MySQL", "JavaScript", "Kali Linux"],
     results: [
-      "Detected security issues 95% earlier in development cycle",
-      "Reduced security vulnerabilities in production by 82%",
-      "Automated 90% of security testing processes",
-      "Decreased time-to-market by 30% through automation"
+      "악성코드 분석: 리버싱 도구(IDA Pro)를 활용하여 악성 행위의 실행 흐름과 C2 통신 메커니즘을 심층 분석함.",
+      "워게임 개발: Docker와 PHP 기반의 자체 실습 환경을 구축하여 단계별 공격 시나리오와 난독화 기법을 직접 구현함.",
+      "웹 관리자 권한 탈취 및 시스템 Root 권한 상승을 통해 애플리케이션과 인프라 전반의 침투 역량을 입증함."
     ]
   }
 ];
