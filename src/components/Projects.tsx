@@ -323,7 +323,26 @@ const projects = [
           }
         ],
         description: "Tracking vulnerability trends and remediation progress over time. Created executive dashboards providing visibility into security posture and improvement metrics with automated ticket creation and severity-based SLA management."
+      },
+      {
+        title: "Security Metrics & Reporting",
+        images: [
+          {
+            url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Vulnerability trends and remediation metrics"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Executive security posture dashboard"
+          },
+          {
+            url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+            caption: "Automated vulnerability ticket management system"
+          }
+        ],
+        description: "Tracking vulnerability trends and remediation progress over time. Created executive dashboards providing visibility into security posture and improvement metrics with automated ticket creation and severity-based SLA management."
       }
+      
     ],
     // 💡 Project Details (DevSecOps 파이프라인 개요)
     details: ` 1. Active/Standby 이중 연결을 통한 3계층 망분리 아키텍처를 구축하여 최대 가용성 확보와 분석에 필요한 로그 신뢰성을 유지했습니다.
